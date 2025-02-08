@@ -1,0 +1,24 @@
+.wrapper {
+  width: 100%;
+  padding-block: 40rem;
+  padding-inline: 5rem;
+  background-color: transparent;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  outline: 0.2rem solid var(--white-10);
+}
+
+.item {
+  width: calc(45% - 0.5rem);
+
+  &:first-child,
+  &:last-child {
+    width: calc(55% - 0.5rem);
+  }
+}

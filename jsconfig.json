@@ -3,13 +3,13 @@
     "paths": {
       "@/*": ["./src/*"],
       "@styles/*": ["./src/assets/styles/*"],
-      "@images/*": ["./src/assets/images/*"],
-      "@icons/*": ["./src/assets/icons/*"],
-      "@fonts/*": ["./src/assets/fonts/*"],
-      "@components/*": ["./src/components/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@utils/*": ["./src/utils/*"],
+      "@images": ["./public/images/index"],
+      "@icons": ["./public/icons/index"],
+      "@fonts": ["./src/assets/fonts/index"],
+      "@components": ["./src/components/index"],
+      "@constants": ["./src/constants/index"],
+      "@hooks": ["./src/hooks/index"],
+      "@utils": ["./src/utils/index"],
     }
   }
 }

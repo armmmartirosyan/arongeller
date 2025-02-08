@@ -1,0 +1,54 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem 4rem;
+  z-index: 999;
+}
+
+.logo {
+  height: 5rem;
+}
+
+.name {
+  color: white;
+  font-size: 1.4rem;
+}
+
+.menu_burger {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+  cursor: pointer;
+
+  &.open {
+    .menu_dash:first-child {
+      transform: rotateZ(45deg);
+      top: 0.58rem;
+    }
+    .menu_dash:last-child {
+      transform: rotateZ(-45deg);
+      bottom: 0.58rem;
+    }
+    &:hover {
+      .menu_dash {
+        background-color: var(--deep-orange);
+      }
+    }
+  }
+}
+
+.menu_dash {
+  width: 100%;
+  height: 0.2rem;
+  background-color: white;
+  transition: all 0.4s;
+  position: relative;
+}
