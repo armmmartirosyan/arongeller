@@ -1,4 +1,4 @@
-import { Header, Banner, InfoCounter, Album } from "@components";
+import { Header, Banner, InfoCounter, Album, Footer } from "@components";
 import styles from "@styles/home.module.scss";
 
 export default function Home() {
@@ -8,8 +8,9 @@ export default function Home() {
         <Header />
         <Banner />
         <InfoCounter />
-        <Album />
       </div>
+      <Album />
+      <Footer />
     </main>
   );
 }

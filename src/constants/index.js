@@ -1,3 +1,5 @@
+export * from "./architecture";
+
 export const COUNTER_INFORMATION = [
   { count: 380, name: "Hoisting Cranes" },
   { count: 45, name: "Construction projects put into operation" },
@@ -10,4 +12,9 @@ export const COUNTER_INFORMATION = [
   { count: 45, name: "Transactions With Real Estate" },
 ];
 
-export * from "./architecture";
+export const MENU = [
+  { link: "#", text: "Home" },
+  { link: "#", text: "Reviews" },
+  { link: "#", text: "Contact" },
+  { link: "#", text: "Portfolio" },
+];

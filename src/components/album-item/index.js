@@ -8,7 +8,7 @@ export function AlbumItem({ album, className }) {
     <article className={`${styles.container} ${className}`}>
       <Image
         priority
-        quality={70}
+        quality={60}
         src={album.primaryImage}
         className={styles.image}
         alt={album.name}

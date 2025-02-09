@@ -8,7 +8,12 @@ export function Header() {
   return (
     <header className={styles.header}>
       <Link href="#">
-        <Image src={logo} className={styles.logo} alt="Aron Geller" />
+        <Image
+          src={logo}
+          className={styles.logo}
+          alt="Aron Geller"
+          height="auto"
+        />
       </Link>
       <MenuBurger open={false} />
     </header>
