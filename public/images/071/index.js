@@ -1,0 +1,10 @@
+export { default as car1of1 } from "./car_1_1.jpg";
+export { default as car2of1 } from "./car_1_2.jpg";
+export { default as car3of1 } from "./car_1_3.jpg";
+export { default as car4of1 } from "./car_1_4.jpg";
+export { default as car5of1 } from "./car_1_5.jpg";
+export { default as car6of1 } from "./car_1_6.jpg";
+export { default as one } from "./one.jpg";
+export { default as two } from "./two.jpg";
+export { default as escise } from "./escise.jpg";
+export { default as primary } from "./primary.jpg";

@@ -11,12 +11,12 @@ export function Banner() {
         meticulous craftsmanship to create structures that stand the test of
         time.
       </p>
-      <div className={styles.bottom_dash}>
+      {/* <div className={styles.bottom_dash}>
         <div className={styles.bottom_dash_wrapper}>
           <FontAwesomeIcon icon={faArrowDown} className={styles.arrow} />
           <p className={styles.bottom_dash_text}>Scroll to Explore</p>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

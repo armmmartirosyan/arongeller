@@ -9,3 +9,5 @@ export const COUNTER_INFORMATION = [
   { count: 2, name: "Hotels" },
   { count: 45, name: "Transactions With Real Estate" },
 ];
+
+export * from "./architecture";

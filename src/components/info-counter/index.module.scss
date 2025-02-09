@@ -2,7 +2,13 @@
   width: 100%;
   padding-block: 40rem;
   padding-inline: 5rem;
-  background-color: transparent;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 .row {
