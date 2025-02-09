@@ -12,9 +12,10 @@ export const PROJECT079 = {
   escise: null,
   primaryImage: o79.primary,
   images: [o79.one, o79.two, o79.three, o79.four],
-  carousel1: [o79.car1of1, o79.car2of1, o79.car3of1],
-  carousel2: [o79.car1of2, o79.car2of2, o79.car3of2, o79.car4of2],
-  carousels: [this.carousel1, this.carousel2],
+  carousels: [
+    [o79.car1of1, o79.car2of1, o79.car3of1],
+    [o79.car1of2, o79.car2of2, o79.car3of2, o79.car4of2],
+  ],
 };
 
 export const PROJECT055 = {
@@ -28,8 +29,7 @@ export const PROJECT055 = {
   siteArea: null,
   primaryImage: o55.primary,
   images: [o55.one, o55.two, o55.three, o55.four, o55.five],
-  carousel1: [o55.car1of1, o55.car2of1, o55.car3of1],
-  carousels: [this.carousel1],
+  carousels: [[o55.car1of1, o55.car2of1, o55.car3of1]],
 };
 
 export const PROJECT071 = {
@@ -44,15 +44,16 @@ export const PROJECT071 = {
   primaryImage: o71.primary,
   escise: o71.escise,
   images: [o71.one, o71.two],
-  carousel1: [
-    o71.car1of1,
-    o71.car2of1,
-    o71.car3of1,
-    o71.car4of1,
-    o71.car5of1,
-    o71.car6of1,
+  carousels: [
+    [
+      o71.car1of1,
+      o71.car2of1,
+      o71.car3of1,
+      o71.car4of1,
+      o71.car5of1,
+      o71.car6of1,
+    ],
   ],
-  carousels: [this.carousel1],
 };
 
 export const PROJECT007 = {
@@ -66,10 +67,11 @@ export const PROJECT007 = {
   description: null,
   primaryImage: o07.primary,
   images: [o07.one, o07.two, o07.three, o07.four, o07.five, o07.six],
-  carousel1: [o07.car1of1, o07.car2of1, o07.car3of1],
-  carousel2: [o07.car1of2, o07.car2of2, o07.car3of2],
-  carousel3: [o07.car1of3, o07.car2of3, o07.car3of3],
-  carousels: [this.carousel1, this.carousel2, this.carousel3],
+  carousels: [
+    [o07.car1of1, o07.car2of1, o07.car3of1],
+    [o07.car1of2, o07.car2of2, o07.car3of2],
+    [o07.car1of3, o07.car2of3, o07.car3of3],
+  ],
 };
 
 export const PROJECT063 = {
@@ -85,10 +87,11 @@ export const PROJECT063 = {
   primaryImage: o63.primary,
   escise: o63.escise,
   images: [o63.one, o63.two, o63.three, o63.four],
-  carousel1: [o63.car1of1, o63.car2of1, o63.car3of1, o63.car4of1],
-  carousel2: [o63.car1of2, o63.car2of2, o63.car3of2, o63.car4of2],
-  carousel3: [o63.car1of3, o63.car2of3, o63.car3of3],
-  carousels: [this.carousel1, this.carousel2, this.carousel3],
+  carousels: [
+    [o63.car1of1, o63.car2of1, o63.car3of1, o63.car4of1],
+    [o63.car1of2, o63.car2of2, o63.car3of2, o63.car4of2],
+    [o63.car1of3, o63.car2of3, o63.car3of3],
+  ],
 };
 
 export const PROJECT034 = {
@@ -103,8 +106,9 @@ export const PROJECT034 = {
   primaryImage: o34.primary,
   escise: o34.escise,
   images: [o34.one, o34.two, o34.three],
-  carousel1: [o34.car1of1, o34.car2of1, o34.car3of1, o34.car4of1, o34.car5of1],
-  carousels: [this.carousel1],
+  carousels: [
+    [o34.car1of1, o34.car2of1, o34.car3of1, o34.car4of1, o34.car5of1],
+  ],
 };
 
 export const PROJECTS = [
