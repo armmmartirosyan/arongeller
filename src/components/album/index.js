@@ -14,8 +14,8 @@ export function Album() {
             <AlbumItem album={item} />
           </div>
         ))}
-        <div className={styles.empty} />
       </div>
+      <div className={styles.empty} />
     </section>
   );
 }
