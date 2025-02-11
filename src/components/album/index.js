@@ -11,7 +11,11 @@ export function Album() {
       <div className={styles.content}>
         {PROJECTS.map((item, index) => (
           <div key={index} className={styles.row}>
-            <AlbumItem album={item} />
+            <AlbumItem
+              album={item}
+              className={styles.item}
+              textContainerClass={styles.text_container_class}
+            />
           </div>
         ))}
       </div>

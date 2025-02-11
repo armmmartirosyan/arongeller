@@ -16,24 +16,32 @@
 .title {
   font-weight: 300;
   color: var(--creamy-white);
-  font-size: 18rem;
+  font-size: 14rem;
   position: absolute;
-  bottom: 10rem;
-  right: 4rem;
+  top: 10rem;
+  left: 4rem;
   max-width: 85%;
-  line-height: 16rem;
-  text-align: right;
+  line-height: 13rem;
+  text-shadow: 7px 5px 6px #000;
+}
+
+.highlighted {
+  font-weight: 300;
+  color: var(--deep-orange);
+  font-size: 14rem;
+  text-shadow: none;
+  line-height: 13rem;
 }
 
 .text {
   font-weight: 300;
   color: var(--creamy-white);
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   font-family: var(--font-satoshi);
   position: absolute;
-  top: 13rem;
-  left: 4rem;
-  max-width: 50rem;
+  bottom: 17rem;
+  left: 6rem;
+  max-width: 60rem;
 }
 
 .bottom_dash {
