@@ -5,7 +5,7 @@
   background-color: var(--white-10);
 }
 .name {
-  color: "#BABABA";
+  color: var(--creamy-white);
   font-family: var(--font-satoshi);
   font-size: 1.7rem;
   width: 100%;
@@ -13,7 +13,7 @@
   padding-bottom: 1rem;
 }
 .count {
-  color: "#BABABA";
+  color: var(--creamy-white);
   font-family: var(--font-clash-display);
   font-weight: 400;
   font-size: 13.3rem;
