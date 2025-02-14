@@ -1,7 +1,7 @@
 import { logo } from "@icons";
 import Image from "next/image";
 import Link from "next/link";
-import { MenuBurger } from "./menu-burger";
+import { Menu } from "./menu";
 import styles from "./index.module.scss";
 
 export function Header() {
@@ -15,7 +15,7 @@ export function Header() {
           height="auto"
         />
       </Link>
-      <MenuBurger open={false} />
+      <Menu />
     </header>
   );
 }

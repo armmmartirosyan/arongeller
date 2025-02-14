@@ -52,7 +52,10 @@
 .arrow {
   cursor: pointer;
   transform: rotateZ(45deg);
-  color: var(--creamy-white);
   height: 2rem;
   transition: all 0.4s;
+
+  & path {
+    color: var(--creamy-white);
+  }
 }

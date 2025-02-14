@@ -52,15 +52,46 @@
   color: var(--creamy-white);
   font-family: var(--font-satoshi);
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .creator_link {
+  color: var(--creamy-white);
+  font-size: 1.8rem;
   text-decoration: none;
   transition: all 0.4s;
 
   &:hover {
     color: var(--deep-orange);
     text-decoration: underline;
+  }
+}
+
+.contacts_container {
+  display: flex;
+  align-items: center;
+  column-gap: 4rem;
+  margin: 3rem 0 6rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.contact_link {
+  text-decoration: none;
+  color: var(--creamy-white);
+  font-size: 2.2rem;
+  transition: all 0.4s;
+  padding-inline: 2rem;
+
+  &:hover {
+    color: var(--deep-orange);
+  }
+}
+
+.contact_icon {
+  font-size: 3rem;
+
+  & path {
+    color: var(--creamy-white);
   }
 }

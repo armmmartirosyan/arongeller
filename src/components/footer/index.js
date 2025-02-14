@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { MENU } from "@constants";
+import { MENU, CONTACT_LINKS } from "@constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./index.module.scss";
 
 export function Footer() {
@@ -13,6 +14,20 @@ export function Footer() {
         ))}
       </div> */}
       <h3 className={styles.name}>ARON GELLER</h3>
+
+      <div className={styles.contacts_container}>
+        {CONTACT_LINKS.map((item) => (
+          <Link
+            key={item.name}
+            href={item.href}
+            className={styles.contact_link}
+          >
+            {/* <FontAwesomeIcon icon={item.icon} className={styles.contact_icon} /> */}
+            {item.name}
+          </Link>
+        ))}
+      </div>
+
       <div className={styles.creator_container}>
         <p className={styles.footer_text}>
           &copy; {new Date().getFullYear()} All Rights Reserved
