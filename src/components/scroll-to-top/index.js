@@ -28,7 +28,10 @@ export const ScrollToTop = memo(function ScrollToTop() {
   }
 
   return (
-    <button className={styles.button} onClick={handleScrollUp}>
+    <button
+      className={`${styles.button} hide_on_page_hidden`}
+      onClick={handleScrollUp}
+    >
       <FontAwesomeIcon icon={faAngleUp} className={styles.icon} />
     </button>
   );

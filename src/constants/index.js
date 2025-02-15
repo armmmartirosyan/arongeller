@@ -21,11 +21,18 @@ export const COUNTER_INFORMATION = [
 ];
 
 export const MENU = [
-  { link: "#", text: "Home" },
-  { link: "#", text: "Portfolio" },
-  { link: "#", text: "Architecture" },
-  { link: "#", text: "Reviews" },
-  { link: "#", text: "Contact" },
+  { link: "#", text: "Home", onClick: () => {}, scroll: true },
+  { link: "#", text: "Portfolio", onClick: () => {}, scroll: true },
+  {
+    link: "",
+    text: "Architecture",
+    onClick: (setterFunc) => {
+      setterFunc(true);
+    },
+    scroll: false,
+  },
+  { link: "#", text: "Reviews", onClick: () => {}, scroll: true },
+  { link: "#", text: "Contact", onClick: () => {}, scroll: true },
 ];
 
 export const CONTACT_LINKS = [
@@ -47,3 +54,5 @@ export const QUOTES = [
     text: "Quality is never an accident. It is always the result of intelligent effort.",
   },
 ];
+
+export const HIDDEN_PAGE_CLASS = "hidden";

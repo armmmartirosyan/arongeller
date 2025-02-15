@@ -47,6 +47,10 @@ body {
 
   &.hidden {
     overflow: hidden;
+
+    & .hide_on_page_hidden {
+      display: none;
+    }
   }
 }
 

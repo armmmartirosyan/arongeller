@@ -16,8 +16,8 @@ export default function Home() {
         <Banner />
         <InfoCounter />
       </div>
-      <Album />
       <Quotes />
+      <Album />
       <Footer />
     </main>
   );
