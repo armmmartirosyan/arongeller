@@ -11,22 +11,39 @@
   height: 100vh;
   position: sticky;
   top: 0;
+}
+
+.sticky_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.text_cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(7px);
+  z-index: 2;
+  opacity: 0;
 }
 
 .sticky_text {
   color: var(--deep-orange);
   font-weight: 400;
   font-size: 12rem;
+  z-index: 1;
 }
 
 .content {
   width: 100%;
   padding-inline: 13rem;
   height: fit-content;
-  backdrop-filter: blur(4px);
 }
 
 .row {
@@ -53,7 +70,6 @@
 .empty {
   width: 100%;
   height: 100vh;
-  backdrop-filter: blur(4px);
 }
 
 .row:nth-child(even) .item {

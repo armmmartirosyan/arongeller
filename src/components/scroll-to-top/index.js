@@ -14,7 +14,6 @@ export const ScrollToTop = memo(function ScrollToTop() {
 
   const handleVisibleButton = useCallback(() => {
     setShowGoTop(window.pageYOffset > 500);
-    console.log("entered");
   }, []);
 
   useEffect(() => {

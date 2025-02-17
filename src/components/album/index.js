@@ -1,14 +1,31 @@
-import styles from "./index.module.scss";
+"use client";
+
+import { motion, useScroll } from "framer-motion";
+import { useRef } from "react";
 import { PROJECTS } from "@constants";
 import { AlbumItem } from "@components";
+import styles from "./index.module.scss";
 
 export function Album() {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "start center"],
+  });
+
   return (
     <section className={styles.container}>
       <div className={styles.sticky}>
-        <p className={styles.sticky_text}>Architecture</p>
+        <div className={styles.sticky_wrapper}>
+          <p className={styles.sticky_text}>Architecture</p>
+          <motion.div
+            className={styles.text_cover}
+            style={{ opacity: scrollYProgress }}
+          />
+        </div>
       </div>
-      <div className={styles.content}>
+      <div ref={ref} className={styles.content}>
         {PROJECTS.map((item, index) => (
           <div key={index} className={styles.row}>
             <AlbumItem
