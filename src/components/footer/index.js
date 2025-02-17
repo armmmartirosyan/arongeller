@@ -19,6 +19,7 @@ export function Footer() {
         {CONTACT_LINKS.map((item) => (
           <Link
             key={item.name}
+            target={item.target}
             href={item.href}
             className={styles.contact_link}
           >

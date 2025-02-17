@@ -1,0 +1,17 @@
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.loading {
+  width: 2.8rem;
+  height: 2.8rem;
+  animation: rotate infinite 1.5s linear;
+}

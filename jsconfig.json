@@ -5,6 +5,7 @@
       "@styles/*": ["./src/assets/styles/*"],
       "@images": ["./public/images/index"],
       "@icons": ["./public/icons/index"],
+      "@actions": ["./src/actions/index"],
       "@fonts": ["./src/assets/fonts/index"],
       "@components": ["./src/components/index"],
       "@constants": ["./src/constants/index"],

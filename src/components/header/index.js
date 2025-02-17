@@ -7,7 +7,7 @@ import styles from "./index.module.scss";
 export function Header() {
   return (
     <header className={styles.header}>
-      <Link href="#">
+      <Link href="/">
         <Image
           src={logo}
           className={styles.logo}

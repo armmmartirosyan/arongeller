@@ -1,0 +1,35 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 88rem;
+  height: fit-content;
+  max-width: 100%;
+  padding: 3.2rem;
+  background-color: var(--matt-black);
+  border-radius: 1.6rem;
+}
+
+.input {
+  margin-bottom: 3rem;
+}
+
+.submit_button {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.envelope {
+  transition: all 0.4s;
+
+  & path {
+    transition: all 0.4s;
+    color: var(--white-gray);
+  }
+}

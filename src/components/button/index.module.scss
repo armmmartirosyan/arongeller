@@ -1,0 +1,26 @@
+.button {
+  width: fit-content;
+  color: var(--white-gray);
+  font-size: 2rem;
+  background-color: transparent;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  transition: all 0.4s;
+  text-transform: uppercase;
+  border: 0.1rem solid white;
+  outline: 0;
+
+  &:hover {
+    color: var(--deep-orange) !important;
+    border-color: var(--deep-orange);
+
+    & * {
+      color: var(--deep-orange) !important;
+    }
+  }
+}

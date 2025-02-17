@@ -7,6 +7,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { portrait1, portrait2 } from "@images";
 
 export * from "./architecture";
+export * from "./reviews";
 
 export const COUNTER_INFORMATION = [
   { count: 380, name: "Hoisting Cranes" },
@@ -21,8 +22,8 @@ export const COUNTER_INFORMATION = [
 ];
 
 export const MENU = [
-  { link: "#", text: "Home", onClick: () => {}, scroll: true },
-  { link: "#", text: "Portfolio", onClick: () => {}, scroll: true },
+  { link: "/", text: "Home", onClick: () => {}, scroll: true },
+  { link: "/portfolio", text: "Portfolio", onClick: () => {}, scroll: true },
   {
     link: "",
     text: "Architecture",
@@ -31,15 +32,38 @@ export const MENU = [
     },
     scroll: false,
   },
-  { link: "#", text: "Reviews", onClick: () => {}, scroll: true },
-  { link: "#", text: "Contact", onClick: () => {}, scroll: true },
+  { link: "/reviews", text: "Reviews", onClick: () => {}, scroll: true },
+  { link: "/contact", text: "Contact", onClick: () => {}, scroll: true },
 ];
 
+// export const EMAIL = "arongeller@mail.com"; TODO: Uncomment this
+export const EMAIL = "armmmartirosyan@mail.ru";
+
 export const CONTACT_LINKS = [
-  { name: "Facebook", icon: faFacebookF, href: "#" },
-  { name: "Instagram", icon: faInstagram, href: "#" },
-  { name: "YouTube", icon: faYoutube, href: "#" },
-  { name: "Gmail", icon: faEnvelope, href: "#" },
+  {
+    name: "Facebook",
+    icon: faFacebookF,
+    href: "https://facebook.com/aron.geller",
+    target: "_blank",
+  },
+  {
+    name: "Instagram",
+    icon: faInstagram,
+    href: "https://www.instagram.com/engineer.arongeller",
+    target: "_blank",
+  },
+  {
+    name: "YouTube",
+    icon: faYoutube,
+    href: "https://www.youtube.com/channel/UCnDWL_wHom3bRjuQDsQNRZQ",
+    target: "_blank",
+  },
+  {
+    name: "Gmail",
+    icon: faEnvelope,
+    target: undefined,
+    href: `mailto:${EMAIL}`,
+  },
 ];
 
 export const QUOTES = [

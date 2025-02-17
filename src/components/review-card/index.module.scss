@@ -1,0 +1,35 @@
+.container {
+  width: calc(50% - 2rem);
+  padding: 2rem;
+  background-color: var(--matt-black);
+  border-radius: 1.6rem;
+}
+
+.primary_text {
+  font-size: 2rem;
+  color: var(--deep-orange);
+  font-weight: 400;
+  font-family: var(--font-satoshi);
+  opacity: 0.7;
+}
+
+.text {
+  color: var(--white-gray);
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: var(--font-satoshi);
+  margin-bottom: 2rem;
+}
+
+.name_location {
+  font-family: var(--font-satoshi);
+  font-weight: 500;
+  color: white;
+  font-size: 2.2rem;
+}
+
+.location {
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+}
