@@ -17,8 +17,10 @@ export default function Home() {
         <InfoCounter />
       </div>
       <Quotes />
-      <Album />
-      <Footer />
+      <div className={styles.bottom_part}>
+        <Album />
+        <Footer />
+      </div>
     </main>
   );
 }
