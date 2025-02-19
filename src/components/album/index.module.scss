@@ -1,3 +1,11 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  overflow-y: auto;
+  position: relative;
+}
+
 .container {
   width: 100%;
   background-color: black;
