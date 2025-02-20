@@ -1,6 +1,5 @@
 import { QUOTES } from "@constants";
 import { Item } from "./item";
-import styles from "./index.module.scss";
 
 export function Quotes() {
   return (
