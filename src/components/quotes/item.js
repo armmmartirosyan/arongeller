@@ -11,6 +11,7 @@ function useParallax(value, distance) {
 
 export const Item = memo(function Item({ item }) {
   const ref = useRef(null);
+
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 420);
 
@@ -20,10 +21,10 @@ export const Item = memo(function Item({ item }) {
         <Image src={item.image} alt={item.text} className={styles.image} />
       </div>
       <motion.h2
-        initial={{ visibility: "hidden" }}
         animate={{ visibility: "visible" }}
-        style={{ y }}
+        initial={{ visibility: "hidden" }}
         className={styles.text}
+        style={{ y }}
       >
         {item.text}
       </motion.h2>

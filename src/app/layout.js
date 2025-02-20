@@ -1,5 +1,4 @@
 import { allFontsVariables } from "@fonts";
-import { ScrollToTop } from "@components";
 import "@styles/globals.scss";
 
 export const metadata = {
@@ -10,9 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={allFontsVariables}>
-        {children} <ScrollToTop />
-      </body>
+      <body className={allFontsVariables}>{children}</body>
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1"

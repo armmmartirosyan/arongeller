@@ -5,12 +5,13 @@ import {
   Footer,
   Quotes,
   Album,
+  ScrollToTop,
 } from "@components";
 import styles from "@styles/home.module.scss";
 
 export default function Home() {
   return (
-    <main className="main">
+    <main className={`${styles.main} main`}>
       <div className={styles.top_part}>
         <Header />
         <Banner />
@@ -19,6 +20,7 @@ export default function Home() {
       <Quotes />
       <Album />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }

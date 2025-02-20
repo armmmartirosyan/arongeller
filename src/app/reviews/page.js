@@ -1,4 +1,4 @@
-import { Header, Footer, ReviewCard } from "@components";
+import { Header, Footer, ReviewCard, ScrollToTop } from "@components";
 import { REVIEWS } from "@constants";
 import styles from "@styles/reviews.module.scss";
 
@@ -15,6 +15,7 @@ export default function Reviews() {
         ))}
       </div>
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }

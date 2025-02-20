@@ -1,4 +1,4 @@
-import { Header, Footer, ContactForm } from "@components";
+import { Header, Footer, ContactForm, ScrollToTop } from "@components";
 import styles from "@styles/contact.module.scss";
 
 export default function Contact() {
@@ -10,6 +10,7 @@ export default function Contact() {
       </div>
       <ContactForm />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }

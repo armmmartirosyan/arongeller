@@ -19,9 +19,22 @@
   padding-inline: 3rem;
   border-radius: 4rem;
   text-decoration: none;
+  transition: all 0.4s;
 
-  &:hover .arrow {
-    transform: rotateZ(90deg);
+  &:hover {
+    border-color: var(--deep-orange);
+
+    & .link {
+      color: var(--deep-orange);
+    }
+
+    & .arrow {
+      transform: rotateZ(90deg);
+
+      & path {
+        color: var(--deep-orange);
+      }
+    }
   }
 }
 
@@ -29,6 +42,7 @@
   font-weight: 400;
   color: var(--creamy-white);
   font-size: 2.8rem;
+  transition: all 0.4s;
 }
 
 .name_container {
@@ -56,6 +70,7 @@
   transition: all 0.4s;
 
   & path {
+    transition: all 0.4s;
     color: var(--creamy-white);
   }
 }
