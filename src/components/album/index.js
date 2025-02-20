@@ -13,7 +13,7 @@ export const Album = memo(function Album() {
   const { scrollYProgress } = useScroll({
     target: ref,
     container: containerRef,
-    offset: ["start end", "start center"],
+    offset: ["0 0.8", "0 0"],
   });
 
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
