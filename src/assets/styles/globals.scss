@@ -24,13 +24,13 @@
   scroll-behavior: smooth;
 }
 
-*::-webkit-scrollbar {
-  width: 1rem;
+// *::-webkit-scrollbar {
+//   width: 1rem;
 
-  &:horizontal {
-    height: 1rem;
-  }
-}
+//   &:horizontal {
+//     height: 1rem;
+//   }
+// }
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--gray-transparent);

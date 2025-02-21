@@ -13,10 +13,14 @@ export const Album = memo(function Album() {
   const { scrollYProgress } = useScroll({
     target: ref,
     container: containerRef,
-    offset: ["0 0.8", "0 0"],
+    offset: ["0 0.85", "0 0", "1 0"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.95, 1],
+    [0, 1, 1, 0]
+  );
 
   return (
     <div ref={containerRef} className={styles.wrapper}>

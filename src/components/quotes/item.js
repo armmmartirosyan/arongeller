@@ -1,33 +1,38 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "motion/react";
-import { memo, useRef } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./index.module.scss";
 
-function useParallax(value, distance) {
-  return useTransform(value, [0, 1], [-distance, distance]);
-}
-
-export const Item = memo(function Item({ item }) {
-  const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 420);
-
+export function Item({ item }) {
   return (
-    <motion.div className={styles.item}>
-      <div ref={ref} className={styles.img_wrapper}>
+    <div className={styles.item}>
+      <motion.div
+        className={styles.img_wrapper}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        transition={{ duration: 0.4 }}
+        variants={{
+          visible: { opacity: 1 },
+          hidden: { opacity: 0 },
+        }}
+      >
         <Image src={item.image} alt={item.text} className={styles.image} />
-      </div>
+      </motion.div>
       <motion.h2
-        animate={{ visibility: "visible" }}
-        initial={{ visibility: "hidden" }}
         className={styles.text}
-        style={{ y }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        transition={{ duration: 0.4 }}
+        variants={{
+          visible: { opacity: 1, transform: "translateY(0)" },
+          hidden: { opacity: 0, transform: "translateY(-20rem)" },
+        }}
       >
         {item.text}
       </motion.h2>
-    </motion.div>
+    </div>
   );
-});
+}
