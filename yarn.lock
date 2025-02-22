@@ -1824,6 +1824,11 @@ language-tags@^1.0.9:
   dependencies:
     language-subtag-registry "^0.3.20"
 
+lenis@^1.1.20:
+  version "1.1.20"
+  resolved "https://registry.yarnpkg.com/lenis/-/lenis-1.1.20.tgz#24c35199539b3c0064f50b9d26f85355171194aa"
+  integrity sha512-UE64mlJEN4W8DWP2tfHzPzygk94Q2BhjzeG/YHWoyeMJ2Fd6XziBCNN+IvHwmB4GkmKIYxgr0+TvRYTSAMTMFA==
+
 levn@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/levn/-/levn-0.4.1.tgz#ae4562c007473b932a6200d403268dd2fffc6ade"
@@ -1955,6 +1960,11 @@ nodemailer@^6.10.0:
   version "6.10.0"
   resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.10.0.tgz#1f24c9de94ad79c6206f66d132776b6503003912"
   integrity sha512-SQ3wZCExjeSatLE/HBaXS5vqUOQk6GtBdIIKxiFdmm01mOQZX/POJkO3SUX1wDiYcwUOJwT23scFSC9fY2H8IA==
+
+nuka-carousel@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-8.2.0.tgz#fd086423e02acec7643dd04d38aa3d891cc2bd6a"
+  integrity sha512-Wt6rAlSKnhQyZQETfdb5HGSzNc1hcnWls2pA+WpHqi6xq+F44k+oaldFEaSTxvSuVMz2Fo8LhDFGInlYlXepeQ==
 
 object-assign@^4.1.1:
   version "4.1.1"

@@ -1,0 +1,28 @@
+.footer_quote_container {
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer_quote_wrapper {
+  max-width: 70rem;
+  position: relative;
+}
+
+.footer_quote {
+  color: var(--creamy-white);
+  font-family: var(--font-satoshi);
+  font-weight: 400;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.footer_quote_author {
+  color: var(--deep-orange);
+  font-weight: 400;
+  font-size: 3rem;
+  position: relative;
+  left: 60%;
+}

@@ -8,7 +8,7 @@ import { MenuBurger } from "./menu-burger";
 import { ArchitecturesList } from "../architectures-list";
 import styles from "./index.module.scss";
 
-export function Menu() {
+export function Menu({ mode }) {
   const [showArchitectures, setShowArchitectures] = useState(false);
 
   const handleCloseArchitectures = useCallback(() => {
@@ -18,7 +18,7 @@ export function Menu() {
   useHiddenPage(showArchitectures);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${styles[mode]}`}>
       <div className={styles.menu_container}>
         {MENU.map((item) => (
           <Link
@@ -33,10 +33,10 @@ export function Menu() {
         ))}
 
         {showArchitectures && (
-          <ArchitecturesList onClose={handleCloseArchitectures} />
+          <ArchitecturesList onClose={handleCloseArchitectures} mode={mode} />
         )}
       </div>
-      <MenuBurger open={false} />
+      <MenuBurger open={false} mode={mode} />
     </div>
   );
 }

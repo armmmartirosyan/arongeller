@@ -17,10 +17,11 @@
       transform: rotateZ(-45deg);
       bottom: 0.58rem;
     }
-    &:hover {
-      .menu_dash {
-        background-color: var(--deep-orange);
-      }
+  }
+
+  &:hover {
+    .menu_dash {
+      background-color: var(--deep-orange) !important;
     }
   }
 }
@@ -50,6 +51,20 @@
 
   &:hover {
     color: var(--deep-orange);
+  }
+}
+
+.light {
+  .link {
+    color: var(--matt-black);
+
+    &:hover {
+      color: var(--deep-orange);
+    }
+  }
+
+  .menu_dash {
+    background-color: var(--matt-black);
   }
 }
 

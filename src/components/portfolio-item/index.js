@@ -1,0 +1,51 @@
+"use client";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLocationDot,
+  faAngleRight,
+  faAngleLeft,
+} from "@fortawesome/free-solid-svg-icons";
+import { Carousel } from "nuka-carousel";
+import Image from "next/image";
+import styles from "./index.module.scss";
+
+export function PortfolioItem({ item }) {
+  return (
+    <section className={styles.container}>
+      <Carousel
+        renderCenterLeftControls={({ previousSlide }) => (
+          <button onClick={previousSlide}>leg</button>
+        )}
+        renderCenterRightControls={({ nextSlide }) => (
+          <button onClick={nextSlide}>lll</button>
+        )}
+        className={styles.carousel}
+        autoplayInterval={5000}
+        scrollDistance="slide"
+        wrapMode="wrap"
+        showArrows
+        autoplay
+        swiping
+      >
+        {item.images.map((image, index) => (
+          <figure className={styles.item} key={index}>
+            <Image src={image} className={styles.image} alt={item.name} />
+          </figure>
+        ))}
+      </Carousel>
+
+      <p className={styles.name}>
+        {item.name}
+        {item.shortDescription && ` - ${item.shortDescription}`}
+      </p>
+      <p className={styles.location}>
+        <FontAwesomeIcon
+          icon={faLocationDot}
+          className={styles.location_icon}
+        />
+        {item.location}
+      </p>
+    </section>
+  );
+}

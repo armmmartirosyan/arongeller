@@ -1,0 +1,80 @@
+.banner {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.bg_i {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+  width: 60rem;
+  position: absolute;
+  right: 10rem;
+  top: 20%;
+  color: white;
+  font-size: 2.4rem;
+  z-index: 3;
+  text-align: justify;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background: linear-gradient(0deg, #fff0 0%, #0003 12%, #000 100%);
+}
+
+.firstThree,
+.seconThree {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+  z-index: 3;
+}
+
+.firstThree {
+  top: 10rem;
+  left: 8rem;
+}
+
+.info_container {
+  position: absolute;
+  z-index: 3;
+  width: 60rem;
+  bottom: 10rem;
+  right: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 3rem;
+}
+
+.info_item {
+  width: 17.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info_item_count {
+  font-size: 4rem;
+  font-family: var(--font-satoshi);
+  color: white;
+}
+
+.info_item_name {
+  font-size: 2.4rem;
+  font-weight: 300;
+  font-family: var(--font-satoshi);
+  color: white;
+}

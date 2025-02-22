@@ -1,6 +1,14 @@
 export { default as banner } from "./banner.webp";
 export { default as portrait1 } from "./portrait1.webp";
 export { default as portrait2 } from "./portrait2.webp";
+export { default as crane } from "./crane.webp";
+export * as dreamlandProject from "./dreamland-project";
+export * as fashionVilla from "./fashion-villa";
+export * as alurNatura from "./alur-natura";
+export * as whiteCube from "./white-cube";
+export * as vittorio from "./vittorio";
+export * as fullmoon from "./fullmoon";
+export * as noName from "./no-name";
 export * as o63 from "./063";
 export * as o79 from "./079";
 export * as o34 from "./034";

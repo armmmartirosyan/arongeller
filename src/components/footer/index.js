@@ -1,18 +1,10 @@
 import Link from "next/link";
-import { MENU, CONTACT_LINKS } from "@constants";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { CONTACT_LINKS } from "@constants";
 import styles from "./index.module.scss";
 
 export function Footer() {
   return (
     <footer className={styles.footer}>
-      {/* <div className={styles.menu}>
-        {MENU.map((item) => (
-          <Link href={item.link} key={item.text} className={styles.link}>
-            {item.text}
-          </Link>
-        ))}
-      </div> */}
       <h3 className={styles.name}>ARON GELLER</h3>
 
       <div className={styles.contacts_container}>
@@ -23,7 +15,6 @@ export function Footer() {
             href={item.href}
             className={styles.contact_link}
           >
-            {/* <FontAwesomeIcon icon={item.icon} className={styles.contact_icon} /> */}
             {item.name}
           </Link>
         ))}

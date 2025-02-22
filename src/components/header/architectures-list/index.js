@@ -5,9 +5,12 @@ import styles from "./index.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-export function ArchitecturesList({ onClose }) {
+export function ArchitecturesList({ onClose, mode }) {
   return (
-    <div className={styles.architecture_container} onClick={onClose}>
+    <div
+      className={`${styles.architecture_container} ${styles[mode]}`}
+      onClick={onClose}
+    >
       <div className={styles.wrapper} onClick={(e) => e.stopPropagation()}>
         <FontAwesomeIcon
           icon={faXmark}

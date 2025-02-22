@@ -7,17 +7,18 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { portrait1, portrait2 } from "@images";
 
 export * from "./architecture";
+export * from "./portfolio";
 export * from "./reviews";
 
 export const COUNTER_INFORMATION = [
   { count: 380, name: "Hoisting Cranes" },
-  { count: 45, name: "Construction projects put into operation" },
-  { count: 62, name: "Tropicall Villas" },
-  { count: 51, name: "Pools" },
-  { count: 15, name: "Years of construction  in Indonesia" },
   { count: 3, name: "Awards" },
-  { count: 4, name: "Tower Cranes" },
+  { count: 51, name: "Pools" },
   { count: 2, name: "Hotels" },
+  { count: 62, name: "Tropicall Villas" },
+  { count: 4, name: "Tower Cranes" },
+  { count: 15, name: "Years of construction  in Indonesia" },
+  { count: 45, name: "Construction projects put into operation" },
   { count: 45, name: "Transactions With Real Estate" },
 ];
 

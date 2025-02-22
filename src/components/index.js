@@ -13,3 +13,7 @@ export { Textarea } from "./textarea";
 export { Button } from "./button";
 export { Loading } from "./loading";
 export { ContactForm } from "./contact-form";
+export { TextFade } from "./text-fade";
+export { FooterQuote } from "./footer-quote";
+export { PortfolioBanner } from "./portfolio-banner";
+export { PortfolioItem } from "./portfolio-item";

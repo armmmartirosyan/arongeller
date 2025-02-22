@@ -78,6 +78,35 @@ body * {
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
+  overflow-x: clip;
+}
+
+// Nuka Carousel
+
+.nuka-wrapper {
+  width: fit-content;
+}
+
+.nuka-overflow {
+  overflow: hidden !important;
+}
+
+.nuka-nav-button.nuka-nav-button-prev,
+.nuka-nav-button.nuka-nav-button-next {
+  background: unset !important;
+  width: 8rem;
+  height: 8rem;
+
+  & svg path {
+    fill: white;
+    transition: all 0.4s;
+  }
+
+  &:hover {
+    & svg path {
+      fill: var(--deep-orange);
+    }
+  }
 }
 
 // @media only screen and (max-width: 1440px) {

@@ -6,6 +6,7 @@ import {
   Quotes,
   Album,
   ScrollToTop,
+  FooterQuote,
 } from "@components";
 import styles from "@styles/home.module.scss";
 
@@ -19,7 +20,10 @@ export default function Home() {
       </div>
       <Quotes />
       <Album />
-      <Footer />
+      <div className={styles.footer_quote_wrapper}>
+        <FooterQuote />
+        <Footer />
+      </div>
       <ScrollToTop />
     </main>
   );

@@ -2,7 +2,6 @@
   padding-block: 10rem;
   background-color: black;
   padding-inline: 20rem;
-  scroll-snap-align: start;
 }
 
 .menu {
@@ -57,13 +56,12 @@
 }
 
 .creator_link {
-  color: var(--creamy-white);
+  color: var(--deep-orange);
   font-size: 1.8rem;
   text-decoration: none;
   transition: all 0.4s;
 
   &:hover {
-    color: var(--deep-orange);
     text-decoration: underline;
   }
 }

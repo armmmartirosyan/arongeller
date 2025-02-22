@@ -1,0 +1,9 @@
+export { default as one } from "./one.webp";
+export { default as two } from "./two.webp";
+export { default as three } from "./three.webp";
+export { default as four } from "./four.webp";
+export { default as five } from "./five.webp";
+export { default as six } from "./six.webp";
+export { default as seven } from "./seven.webp";
+export { default as eight } from "./eight.webp";
+export { default as nine } from "./nine.webp";

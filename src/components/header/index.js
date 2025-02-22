@@ -4,10 +4,10 @@ import Link from "next/link";
 import { Menu } from "./menu";
 import styles from "./index.module.scss";
 
-export function Header() {
+export function Header({ mode = "dark" }) {
   return (
-    <header className={styles.header}>
-      <Link href="/">
+    <header className={`${styles.header} ${styles[mode]}`}>
+      <Link href="/" scroll={true}>
         <Image
           src={logo}
           className={styles.logo}
@@ -15,7 +15,7 @@ export function Header() {
           height="auto"
         />
       </Link>
-      <Menu />
+      <Menu mode={mode} />
     </header>
   );
 }
