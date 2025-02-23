@@ -1,11 +1,7 @@
 "use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLocationDot,
-  faAngleRight,
-  faAngleLeft,
-} from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { Carousel } from "nuka-carousel";
 import Image from "next/image";
 import styles from "./index.module.scss";

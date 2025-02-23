@@ -27,7 +27,10 @@ export function ArchitecturesList({ onClose, mode }) {
                 className={styles.image}
                 alt={project.name}
               />
-              <Link href={"#"} className={styles.name}>
+              <Link
+                href={`/architecture/${project.number}`}
+                className={styles.name}
+              >
                 {project.name}
                 <FontAwesomeIcon icon={faAngleRight} className={styles.angle} />
               </Link>
