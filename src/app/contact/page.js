@@ -1,13 +1,23 @@
-import { Header, Footer, ContactForm, ScrollToTop } from "@components";
+import {
+  Header,
+  Footer,
+  ContactForm,
+  ScrollToTop,
+  MotionWrapper,
+} from "@components";
+import { textVariant } from "@utils";
 import styles from "@styles/contact.module.scss";
 
 export default function Contact() {
   return (
     <main className="main">
       <Header />
-      <div className={styles.page_head_text_wrapper}>
+      <MotionWrapper
+        {...textVariant()}
+        className={styles.page_head_text_wrapper}
+      >
         <h1 className={styles.page_header}>Contact</h1>
-      </div>
+      </MotionWrapper>
       <ContactForm />
       <Footer />
       <ScrollToTop />

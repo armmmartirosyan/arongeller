@@ -18,3 +18,4 @@ export { FooterQuote } from "./footer-quote";
 export { PortfolioBanner } from "./portfolio-banner";
 export { PortfolioItem } from "./portfolio-item";
 export { ArchitectureContent } from "./architecture-content";
+export { MotionWrapper } from "./motion-wrapper";

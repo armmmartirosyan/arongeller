@@ -1,3 +1,5 @@
+"use client";
+
 import { Header, Footer, ReviewCard, ScrollToTop } from "@components";
 import { REVIEWS } from "@constants";
 import styles from "@styles/reviews.module.scss";

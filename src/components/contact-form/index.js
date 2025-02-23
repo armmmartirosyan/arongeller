@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { zoomIn } from "@utils";
 import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -21,7 +23,7 @@ export function ContactForm() {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <motion.div className={styles.wrapper} {...zoomIn("spring", 0.1, 1)}>
       <form ref={formRef} action={handleSubmit} className={styles.form}>
         <Input
           type="email"
@@ -29,7 +31,6 @@ export function ContactForm() {
           required={true}
           label="Email"
           wrapperClassName={styles.input}
-          // placeholder="example@gmail.com"
         />
 
         <Textarea
@@ -37,7 +38,6 @@ export function ContactForm() {
           required={true}
           label="Message"
           wrapperClassName={styles.input}
-          // placeholder="Feel free to reach to me"
         />
 
         <Button className={styles.submit_button}>
@@ -46,6 +46,6 @@ export function ContactForm() {
         </Button>
         <div className={styles.clear} />
       </form>
-    </div>
+    </motion.div>
   );
 }

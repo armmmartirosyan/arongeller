@@ -1,6 +1,6 @@
-import { logo } from "@icons";
 import Image from "next/image";
 import Link from "next/link";
+import { logo } from "@icons";
 import { Menu } from "./menu";
 import styles from "./index.module.scss";
 
