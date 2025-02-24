@@ -10,18 +10,16 @@ export function PortfolioItem({ item }) {
   return (
     <section className={styles.container}>
       <Carousel
-        renderCenterLeftControls={({ previousSlide }) => (
-          <button onClick={previousSlide}>leg</button>
-        )}
-        renderCenterRightControls={({ nextSlide }) => (
-          <button onClick={nextSlide}>lll</button>
-        )}
+        // renderCenterLeftControls={({ previousSlide }) => (
+        //   <button onClick={previousSlide}>leg</button>
+        // )}
+        // renderCenterRightControls={({ nextSlide }) => (
+        //   <button onClick={nextSlide}>lll</button>
+        // )}
         className={styles.carousel}
-        autoplayInterval={5000}
         scrollDistance="slide"
         wrapMode="wrap"
         showArrows
-        autoplay
         swiping
       >
         {item.images.map((image, index) => (

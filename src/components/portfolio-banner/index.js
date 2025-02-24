@@ -3,7 +3,7 @@ import { COUNTER_INFORMATION } from "@constants";
 import { crane } from "@images";
 import styles from "./index.module.scss";
 
-const firstSix = COUNTER_INFORMATION.slice(0, 6);
+const firstSix = COUNTER_INFORMATION.slice(-6);
 
 export function PortfolioBanner() {
   return (
