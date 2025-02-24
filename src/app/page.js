@@ -8,23 +8,23 @@ import {
   ScrollToTop,
   FooterQuote,
 } from "@components";
-import styles from "@styles/home.module.scss";
+import "@styles/home.scss";
 
 export default function Home() {
   return (
-    <main className={`${styles.main} main`}>
-      <div className={styles.top_part}>
+    <>
+      <div className="top_part">
         <Header />
         <Banner />
         <InfoCounter />
       </div>
       <Quotes />
       <Album />
-      <div className={styles.footer_quote_wrapper}>
+      <div className="footer_quote_wrapper">
         <FooterQuote />
         <Footer />
       </div>
       <ScrollToTop />
-    </main>
+    </>
   );
 }

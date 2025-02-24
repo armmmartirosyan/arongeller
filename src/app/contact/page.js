@@ -6,17 +6,14 @@ import {
   MotionWrapper,
 } from "@components";
 import { textVariant } from "@utils";
-import styles from "@styles/contact.module.scss";
+import "@styles/contact.scss";
 
 export default function Contact() {
   return (
     <main className="main">
       <Header />
-      <MotionWrapper
-        {...textVariant()}
-        className={styles.page_head_text_wrapper}
-      >
-        <h1 className={styles.page_header}>Contact</h1>
+      <MotionWrapper {...textVariant()} className="page_head_text_wrapper">
+        <h1 className="page_header">Contact</h1>
       </MotionWrapper>
       <ContactForm />
       <Footer />

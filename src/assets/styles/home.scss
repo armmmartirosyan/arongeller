@@ -13,14 +13,16 @@
   margin: 0;
 }
 
-.main {
-  scroll-snap-type: y mandatory;
-}
-
 .footer_quote_wrapper {
   scroll-snap-align: start;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+body {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
 }
