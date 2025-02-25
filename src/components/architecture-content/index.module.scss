@@ -41,11 +41,11 @@
   height: auto;
   margin: 0;
   padding: 0;
-  filter: grayscale(1) brightness(0.7);
+  // filter: grayscale(1) brightness(0.7);
   transition: all 0.4s;
 
   &:hover {
-    filter: grayscale(0) brightness(0.7);
+    // filter: grayscale(0) brightness(0.7);
   }
 }
 
