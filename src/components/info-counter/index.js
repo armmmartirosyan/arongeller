@@ -16,7 +16,7 @@ export function InfoCounter() {
         ))}
       </div>
 
-      <Link href="#" className={styles.details_link}>
+      <Link href="/portfolio" className={styles.details_link}>
         Explore
         <FontAwesomeIcon icon={faAngleRight} className={styles.right_icon} />
       </Link>

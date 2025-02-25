@@ -16,7 +16,10 @@ export function AlbumItem({ album, className, textContainerClass }) {
       />
       <div className={`${styles.name_container} ${textContainerClass}`}>
         <h2 className={styles.name}>{album.name}</h2>
-        <Link href={"#"} className={styles.link_container}>
+        <Link
+          href={`/architecture/${album.number}`}
+          className={styles.link_container}
+        >
           <p className={styles.link}>Details</p>
           <FontAwesomeIcon icon={faArrowUpLong} className={styles.arrow} />
         </Link>

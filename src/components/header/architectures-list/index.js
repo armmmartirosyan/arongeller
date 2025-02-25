@@ -20,19 +20,24 @@ export function ArchitecturesList({ onClose, mode }) {
         <div className={styles.list}>
           {PROJECTS.map((project) => (
             <article key={project.number} className={styles.list_item}>
-              <Image
-                priority
-                quality={60}
-                src={project.primaryImage}
-                className={styles.image}
-                alt={project.name}
-              />
               <Link
                 href={`/architecture/${project.number}`}
-                className={styles.name}
+                className={styles.link}
               >
-                {project.name}
-                <FontAwesomeIcon icon={faAngleRight} className={styles.angle} />
+                <Image
+                  priority
+                  quality={60}
+                  src={project.primaryImage}
+                  className={styles.image}
+                  alt={project.name}
+                />
+                <p className={styles.name}>
+                  {project.name}
+                  <FontAwesomeIcon
+                    icon={faAngleRight}
+                    className={styles.angle}
+                  />
+                </p>
               </Link>
             </article>
           ))}

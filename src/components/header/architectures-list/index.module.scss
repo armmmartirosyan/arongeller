@@ -60,6 +60,17 @@
   height: calc(25vh - 2rem);
   min-height: calc(25vh - 2rem);
   position: relative;
+
+  &:hover .angle {
+    opacity: 1;
+    transform: translateX(0.5rem);
+  }
+}
+
+.link {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
 }
 
 .image {
@@ -80,16 +91,10 @@
   text-shadow: -0.3rem 0.2rem 0.2rem #000;
   backdrop-filter: blur(0.1rem);
   padding: 1rem;
-  text-decoration: none;
   display: flex;
   align-items: center;
   column-gap: 1rem;
   flex-direction: row-reverse;
-
-  &:hover .angle {
-    opacity: 1;
-    transform: translateX(0.5rem);
-  }
 }
 
 .angle {
