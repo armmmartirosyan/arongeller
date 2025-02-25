@@ -1,3 +1,7 @@
+"use client";
+
+import { useRef } from "react";
+import { useCountUp, useInViewport } from "@hooks";
 import Image from "next/image";
 import { COUNTER_INFORMATION } from "@constants";
 import { crane } from "@images";
@@ -13,7 +17,14 @@ export function PortfolioBanner() {
           <InfoItem key={index} item={item} />
         ))}
       </div>
-      <Image src={crane} alt="Crane" className={styles.bg_i} />
+      <Image
+        loading="eager"
+        priority
+        quality={60}
+        src={crane}
+        alt="Crane"
+        className={styles.bg_i}
+      />
       <p className={styles.text}>
         We create architecture that is not only elegant and luxurious but also
         thoughtfully designed for families. Our villas are crafted to be safe
@@ -27,9 +38,13 @@ export function PortfolioBanner() {
 }
 
 function InfoItem({ item }) {
+  const targetRef = useRef(null);
+  const enabled = useInViewport(targetRef);
+  const count = useCountUp(item.count, enabled);
+
   return (
-    <div className={styles.info_item}>
-      <p className={styles.info_item_count}>{item.count}</p>
+    <div className={styles.info_item} ref={targetRef}>
+      <p className={styles.info_item_count}>{count}</p>
       <p className={styles.info_item_name}>{item.name}</p>
     </div>
   );

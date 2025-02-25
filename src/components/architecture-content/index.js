@@ -32,7 +32,14 @@ export function ArchitectureContent({ project }) {
       <div className={styles.right_part}>
         {project.images.map((image, index) => (
           <div className={styles.image_wrapper} key={index}>
-            <Image src={image.src} alt={image.alt} className={styles.image} />
+            <Image
+              loading="eager"
+              priority
+              quality={60}
+              src={image.src}
+              alt={image.alt}
+              className={styles.image}
+            />
           </div>
         ))}
       </div>

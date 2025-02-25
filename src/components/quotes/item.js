@@ -18,7 +18,14 @@ export function Item({ item }) {
           hidden: { opacity: 0 },
         }}
       >
-        <Image src={item.image} alt={item.text} className={styles.image} />
+        <Image
+          loading="eager"
+          priority
+          quality={60}
+          src={item.image}
+          alt={item.text}
+          className={styles.image}
+        />
       </motion.div>
       <motion.h2
         className={styles.text}

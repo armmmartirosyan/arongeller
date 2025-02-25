@@ -9,6 +9,9 @@ export function Header({ mode = "dark" }) {
     <header className={`${styles.header} ${styles[mode]}`}>
       <Link href="/" scroll={true}>
         <Image
+          loading="eager"
+          priority
+          quality={60}
           src={logo}
           className={styles.logo}
           alt="Aron Geller"

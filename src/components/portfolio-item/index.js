@@ -24,7 +24,14 @@ export function PortfolioItem({ item }) {
       >
         {item.images.map((image, index) => (
           <figure className={styles.item} key={index}>
-            <Image src={image} className={styles.image} alt={item.name} />
+            <Image
+              loading="eager"
+              priority
+              quality={60}
+              src={image}
+              className={styles.image}
+              alt={item.name}
+            />
           </figure>
         ))}
       </Carousel>

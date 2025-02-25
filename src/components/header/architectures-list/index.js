@@ -25,6 +25,7 @@ export function ArchitecturesList({ onClose, mode }) {
                 className={styles.link}
               >
                 <Image
+                  loading="eager"
                   priority
                   quality={60}
                   src={project.primaryImage}

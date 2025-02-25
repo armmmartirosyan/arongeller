@@ -8,6 +8,7 @@ export function AlbumItem({ album, className, textContainerClass }) {
   return (
     <article className={`${styles.container} ${className}`}>
       <Image
+        loading="eager"
         priority
         quality={60}
         src={album.primaryImage}
