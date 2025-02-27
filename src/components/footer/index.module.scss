@@ -1,7 +1,6 @@
 .footer {
-  padding-block: 10rem 3rem;
+  padding-block: 10rem 6rem;
   background-color: black;
-  padding-inline: 20rem;
 }
 
 .menu {
@@ -92,5 +91,23 @@
 
   & path {
     color: var(--creamy-white);
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .name {
+    font-size: 18rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .name {
+    font-size: 15rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .name {
+    font-size: 14rem;
   }
 }

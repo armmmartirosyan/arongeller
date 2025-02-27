@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import styles from "./index.module.scss";
 
 export function Item({ item }) {
@@ -17,16 +16,10 @@ export function Item({ item }) {
           visible: { opacity: 1 },
           hidden: { opacity: 0 },
         }}
-      >
-        <Image
-          loading="eager"
-          priority
-          quality={60}
-          src={item.image}
-          alt={item.text}
-          className={styles.image}
-        />
-      </motion.div>
+        style={{
+          backgroundImage: `url(${item.imageUrl})`,
+        }}
+      />
       <motion.h2
         className={styles.text}
         initial="hidden"

@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     90deg,
@@ -57,8 +57,8 @@
 
 .list_item {
   width: 100%;
-  height: calc(25vh - 2rem);
-  min-height: calc(25vh - 2rem);
+  height: calc(25dvh - 2rem);
+  min-height: calc(25dvh - 2rem);
   position: relative;
 
   &:hover .angle {

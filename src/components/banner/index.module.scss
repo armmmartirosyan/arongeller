@@ -9,7 +9,7 @@
 
 .banner {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   position: relative;
 }
 
@@ -42,4 +42,31 @@
   bottom: 17rem;
   left: 6rem;
   max-width: 60rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  .title {
+    font-size: 12rem;
+  }
+
+  .highlighted {
+    font-size: 12rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .title {
+    font-size: 11rem;
+    line-height: 11rem;
+    top: 15rem;
+  }
+
+  .highlighted {
+    font-size: 11rem;
+    line-height: 11rem;
+  }
+  .text {
+    font-size: 2.4rem;
+    bottom: 20rem;
+  }
 }

@@ -71,11 +71,13 @@ export const QUOTES = [
   {
     id: 1,
     image: portrait1,
+    imageUrl: "/images/portrait1.webp",
     text: "Work hard in silence, let your success be the noise.",
   },
   {
     id: 2,
     image: portrait2,
+    imageUrl: "/images/portrait2.webp",
     text: "Quality is never an accident. It is always the result of intelligent effort.",
   },
 ];

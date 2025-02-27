@@ -1,6 +1,6 @@
 .wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   scroll-snap-align: start;
   overflow-y: auto;
   position: relative;
@@ -16,7 +16,7 @@
 
 .sticky {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   position: sticky;
   top: 0;
 }
@@ -69,15 +69,11 @@
   &:last-child {
     margin-bottom: 0;
   }
-
-  // &:first-child {
-  //   justify-content: center;
-  // }
 }
 
 .empty {
   width: 100%;
-  height: 40vh;
+  height: 22dvh;
 }
 
 .row:nth-child(even) .item {
@@ -88,5 +84,11 @@
     & * {
       text-align: left !important;
     }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .content {
+    padding-inline: 5rem;
   }
 }

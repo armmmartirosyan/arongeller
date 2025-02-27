@@ -1,6 +1,6 @@
 .top_part {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   scroll-snap-align: start;
   overflow-y: auto;
   position: relative;
@@ -20,8 +20,26 @@
 
 .footer_quote_wrapper {
   scroll-snap-align: start;
-  height: 100vh;
+  // height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+@media only screen and (max-width: 1440px) {
+  .top_part {
+    background-position: -30rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .top_part {
+    background-position: -45rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .top_part {
+    background-position: center;
+  }
 }

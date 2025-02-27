@@ -1,6 +1,6 @@
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   padding-block: 11rem;
   position: relative;
   scroll-snap-align: start;
@@ -13,7 +13,7 @@
 
 .item {
   width: 100vw;
-  height: calc(100vh - 22rem);
+  height: calc(100dvh - 22rem);
 }
 
 .image {

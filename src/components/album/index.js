@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { memo, useRef } from "react";
+import { memo, useCallback, useRef } from "react";
 import { PROJECTS } from "@constants";
 import { AlbumItem } from "@components";
 import styles from "./index.module.scss";
@@ -18,8 +18,26 @@ export const Album = memo(function Album() {
 
   const opacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
+  const handleScroll = useCallback((e) => {
+    const clientRect = e.target.getBoundingClientRect();
+
+    if (clientRect.y !== 0) {
+      const scrollElement = document.getElementById("album-container");
+
+      scrollElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
+
   return (
-    <div ref={containerRef} className={styles.wrapper}>
+    <div
+      ref={containerRef}
+      className={styles.wrapper}
+      onScroll={handleScroll}
+      id="album-container"
+    >
       <section className={styles.container}>
         <div className={styles.sticky}>
           <div className={styles.sticky_wrapper}>
