@@ -36,3 +36,19 @@
     font-size: 1.8rem;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .button {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .button {
+    width: 3.8rem;
+    height: 3.8rem;
+    right: 2rem;
+    bottom: 2rem;
+  }
+}

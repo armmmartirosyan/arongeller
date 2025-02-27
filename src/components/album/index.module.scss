@@ -67,7 +67,7 @@
   }
 
   &:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 }
 
@@ -90,5 +90,29 @@
 @media only screen and (max-width: 1440px) {
   .content {
     padding-inline: 5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sticky_text {
+    font-size: 10rem;
+  }
+
+  .content {
+    padding-inline: 3rem;
+  }
+
+  .row {
+    margin-bottom: 20rem;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .sticky_text {
+    font-size: 6rem;
+  }
+
+  .row {
+    margin-bottom: 15rem;
   }
 }

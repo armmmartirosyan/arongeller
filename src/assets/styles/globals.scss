@@ -125,14 +125,14 @@ body * {
   }
 }
 
-// @media only screen and (max-width: 768px) {
-//   html {
-//     font-size: calc(100vw / (768 / 10));
-//   }
-// }
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: calc(100vw / (768 / 10));
+  }
+}
 
-// @media only screen and (max-width: 525px) {
-//   html {
-//     font-size: calc(100vw / (525 / 10));
-//   }
-// }
+@media only screen and (max-width: 525px) {
+  html {
+    font-size: calc(100vw / (525 / 10));
+  }
+}

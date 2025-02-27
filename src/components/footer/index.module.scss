@@ -111,3 +111,51 @@
     font-size: 14rem;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .name {
+    font-size: 10rem;
+  }
+
+  .footer {
+    padding-block: 6rem;
+  }
+
+  .contact_link {
+    font-size: 1.4rem;
+  }
+
+  .footer_text {
+    font-size: 1.4rem;
+  }
+
+  .creator_link {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .name {
+    font-size: 6rem;
+  }
+
+  .footer {
+    padding-block: 2rem;
+  }
+
+  .contact_link {
+    font-size: 1.2rem;
+  }
+
+  .footer_text {
+    font-size: 1.2rem;
+  }
+
+  .creator_link {
+    font-size: 1.4rem;
+  }
+
+  .contacts_container {
+    margin: 2rem;
+  }
+}

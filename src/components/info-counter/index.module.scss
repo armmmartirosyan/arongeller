@@ -71,3 +71,22 @@
     transition: all 0.4s;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    padding-block: 5rem;
+    padding-inline: 3rem;
+  }
+
+  .details_link {
+    font-size: 1.6rem;
+    padding: 1.5rem 2rem;
+    column-gap: 1rem;
+  }
+
+  .right_icon {
+    & path {
+      font-size: 1.8rem;
+    }
+  }
+}
