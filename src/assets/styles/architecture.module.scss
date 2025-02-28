@@ -4,8 +4,8 @@
 
 .footer_quote_wrapper {
   scroll-snap-align: start;
-  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding-top: 4rem;
 }

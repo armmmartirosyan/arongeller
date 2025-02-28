@@ -3,7 +3,7 @@
   color: var(--white-gray);
   font-size: 2rem;
   background-color: transparent;
-  padding: 2rem;
+  padding: 2rem 2.8rem;
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -22,5 +22,20 @@
     & * {
       color: var(--deep-orange) !important;
     }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .button {
+    font-size: 1.8rem;
+    padding: 1.8rem 2.4rem;
+    gap: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .button {
+    font-size: 1.6rem;
+    padding: 1.2rem 1.8rem;
   }
 }

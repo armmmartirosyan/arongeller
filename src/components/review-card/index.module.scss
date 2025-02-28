@@ -19,6 +19,7 @@
   font-weight: 300;
   font-family: var(--font-satoshi);
   margin-bottom: 2rem;
+  text-align: justify;
 }
 
 .name_location {
@@ -32,4 +33,46 @@
   color: white;
   font-size: 2rem;
   font-weight: 300;
+}
+
+@media only screen and (max-width: 1200px) {
+  .primary_text {
+    font-size: 1.8rem;
+  }
+
+  .text {
+    font-size: 1.8rem;
+  }
+
+  .name_location {
+    font-size: 2rem;
+  }
+
+  .location {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .primary_text {
+    font-size: 1.6rem;
+  }
+
+  .text {
+    font-size: 1.6rem;
+  }
+
+  .name_location {
+    font-size: 1.8rem;
+  }
+
+  .location {
+    font-size: 1.6rem;
+  }
 }
