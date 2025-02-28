@@ -23,8 +23,14 @@ export const COUNTER_INFORMATION = [
 ];
 
 export const MENU = [
-  { link: "/", text: "Home", onClick: () => {}, scroll: true },
-  { link: "/portfolio", text: "Portfolio", onClick: () => {}, scroll: true },
+  { link: "/", text: "Home", onClick: () => {}, scroll: true, activePath: "/" },
+  {
+    link: "/portfolio",
+    text: "Portfolio",
+    onClick: () => {},
+    scroll: true,
+    activePath: "/portfolio",
+  },
   {
     link: "",
     text: "Architecture",
@@ -32,9 +38,22 @@ export const MENU = [
       setterFunc(true);
     },
     scroll: false,
+    activePath: "/architecture",
   },
-  { link: "/reviews", text: "Reviews", onClick: () => {}, scroll: true },
-  { link: "/contact", text: "Contact", onClick: () => {}, scroll: true },
+  {
+    link: "/reviews",
+    text: "Reviews",
+    onClick: () => {},
+    scroll: true,
+    activePath: "/reviews",
+  },
+  {
+    link: "/contact",
+    text: "Contact",
+    onClick: () => {},
+    scroll: true,
+    activePath: "/contact",
+  },
 ];
 
 // export const EMAIL = "arongeller@mail.com"; TODO: Uncomment this

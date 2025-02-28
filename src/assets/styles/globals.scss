@@ -135,4 +135,11 @@ body * {
   html {
     font-size: calc(100vw / (525 / 10));
   }
+
+  .nuka-nav-button.nuka-nav-button-prev,
+  .nuka-nav-button.nuka-nav-button-next {
+    background: unset !important;
+    width: 4rem;
+    height: 4rem;
+  }
 }

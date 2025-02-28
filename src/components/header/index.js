@@ -1,23 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import { logo } from "@icons";
+import { Logo } from "./logo";
 import { Menu } from "./menu";
 import styles from "./index.module.scss";
 
 export function Header({ mode = "dark" }) {
   return (
     <header className={`${styles.header} ${styles[mode]}`}>
-      <Link href="/" scroll={true}>
-        <Image
-          loading="eager"
-          priority
-          quality={60}
-          src={logo}
-          className={styles.logo}
-          alt="Aron Geller"
-          height="auto"
-        />
-      </Link>
+      <Logo />
       <Menu mode={mode} />
     </header>
   );

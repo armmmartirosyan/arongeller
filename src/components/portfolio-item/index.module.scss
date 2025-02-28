@@ -2,8 +2,13 @@
   width: 100vw;
   height: 100dvh;
   padding-block: 11rem;
-  position: relative;
   scroll-snap-align: start;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .carousel {
@@ -24,31 +29,37 @@
 }
 
 .name {
+  padding-inline: 3rem;
+  padding-bottom: 2rem;
   position: absolute;
   width: 100%;
-  top: 15rem;
+  top: 0;
   text-align: center;
   font-size: 5rem;
   font-weight: 400;
   color: white;
   word-spacing: 0.8rem;
-  text-shadow: 0.2rem 0.1rem 0.4rem black;
+  // text-shadow: 0.2rem 0.1rem 0.4rem black;
+  background-color: black;
 }
 
 .location {
   position: absolute;
   width: 100%;
-  bottom: 15rem;
+  bottom: 0;
   text-align: center;
   font-size: 3rem;
   font-weight: 400;
   color: white;
   word-spacing: 0.8rem;
-  text-shadow: 0.2rem 0.1rem 0.4rem black;
+  // text-shadow: 0.2rem 0.1rem 0.4rem black;
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 1rem;
+  padding-inline: 3rem;
+  padding-top: 2rem;
+  background-color: black;
 }
 
 .location_icon {
@@ -56,5 +67,47 @@
 
   & path {
     color: white;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .name {
+    font-size: 4rem;
+  }
+
+  .location {
+    font-size: 2.4rem;
+  }
+
+  .location_icon {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .name {
+    font-size: 3rem;
+  }
+
+  .location {
+    font-size: 2.2rem;
+  }
+
+  .location_icon {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .name {
+    font-size: 2.4rem;
+  }
+
+  .location {
+    font-size: 1.6rem;
+  }
+
+  .location_icon {
+    font-size: 1.6rem;
   }
 }

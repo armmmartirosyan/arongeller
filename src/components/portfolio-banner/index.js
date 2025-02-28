@@ -2,9 +2,7 @@
 
 import { useRef } from "react";
 import { useCountUp, useInViewport } from "@hooks";
-import Image from "next/image";
 import { COUNTER_INFORMATION } from "@constants";
-import { crane } from "@images";
 import styles from "./index.module.scss";
 
 const firstSix = COUNTER_INFORMATION.slice(-6);
@@ -17,14 +15,6 @@ export function PortfolioBanner() {
           <InfoItem key={index} item={item} />
         ))}
       </div>
-      <Image
-        loading="eager"
-        priority
-        quality={60}
-        src={crane}
-        alt="Crane"
-        className={styles.bg_i}
-      />
       <p className={styles.text}>
         We create architecture that is not only elegant and luxurious but also
         thoughtfully designed for families. Our villas are crafted to be safe

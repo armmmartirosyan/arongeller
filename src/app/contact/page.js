@@ -10,7 +10,7 @@ import styles from "@styles/contact.module.scss";
 
 export default function Contact() {
   return (
-    <main className="main">
+    <main id="main" className="main">
       <Header />
       <MotionWrapper
         {...textVariant()}

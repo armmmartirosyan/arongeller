@@ -2,11 +2,14 @@
   margin-bottom: 5rem;
   display: flex;
   justify-content: center;
+  width: 100%;
+  padding-inline: 8rem;
 }
 
 .footer_quote_wrapper {
   max-width: 70rem;
   position: relative;
+  padding-bottom: 3.5rem;
 }
 
 .footer_quote {
@@ -23,8 +26,9 @@
   color: var(--deep-orange);
   font-weight: 400;
   font-size: 3rem;
-  position: relative;
-  left: 60%;
+  position: absolute;
+  right: -4rem;
+  bottom: 0;
 }
 
 @media only screen and (max-width: 768px) {

@@ -6,7 +6,7 @@ import styles from "@styles/reviews.module.scss";
 
 export default function Reviews() {
   return (
-    <main className="main">
+    <main id="main" className="main">
       <Header />
       <div className={styles.page_head_text_wrapper}>
         <h1 className={styles.page_header}>Reviews</h1>

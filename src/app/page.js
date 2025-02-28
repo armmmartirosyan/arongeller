@@ -12,7 +12,7 @@ import styles from "@styles/home.module.scss";
 
 export default function Home() {
   return (
-    <main className={`${styles.main} main`}>
+    <main id="main" className={`${styles.main} main`}>
       <div className={styles.top_part}>
         <Header />
         <Banner />

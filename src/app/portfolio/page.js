@@ -11,7 +11,7 @@ import styles from "@styles/portfolio.module.scss";
 
 export default function Portfolio() {
   return (
-    <main className={`${styles.main} main`}>
+    <main id="main" className={`${styles.main} main`}>
       <Header />
       <PortfolioBanner />
       {VILLAS.map((villa, index) => (
