@@ -13,3 +13,23 @@
   font-size: 15.7rem;
   font-weight: 400;
 }
+
+@media only screen and (max-width: 1000px) {
+  .page_head_text_wrapper {
+    padding-block: 10rem 8rem;
+  }
+
+  .page_header {
+    font-size: 10rem;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .page_head_text_wrapper {
+    padding-block: 9rem 5rem;
+  }
+
+  .page_header {
+    font-size: 8rem;
+  }
+}

@@ -11,6 +11,7 @@ import {
 import styles from "@styles/home.module.scss";
 
 export default function Home() {
+  // comment
   return (
     <main id="main" className={`${styles.main} main`}>
       <div className={styles.top_part}>

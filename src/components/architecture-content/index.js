@@ -1,11 +1,20 @@
+"use client";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faBuilding } from "@fortawesome/free-solid-svg-icons";
+import { useScrollToScrollingSection } from "@hooks";
 import Image from "next/image";
 import styles from "./index.module.scss";
 
 export function ArchitectureContent({ project }) {
+  const handleScroll = useScrollToScrollingSection("architecture-content");
+
   return (
-    <div className={styles.content}>
+    <div
+      className={styles.content}
+      onScroll={handleScroll}
+      id="architecture-content"
+    >
       <div className={styles.left_part}>
         <div className={styles.left_part_container}>
           <h1 className={styles.title}>Architecture</h1>

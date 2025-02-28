@@ -132,6 +132,14 @@
   .creator_link {
     font-size: 1.6rem;
   }
+
+  .contacts_container {
+    padding-inline: 6rem;
+    justify-content: space-around;
+    max-width: 100%;
+    column-gap: unset;
+    margin-inline: 0;
+  }
 }
 
 @media only screen and (max-width: 525px) {
