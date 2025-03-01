@@ -2,11 +2,11 @@ import { Logo } from "./logo";
 import { Menu } from "./menu";
 import styles from "./index.module.scss";
 
-export function Header({ mode = "dark" }) {
+export function Header() {
   return (
-    <header className={`${styles.header} ${styles[mode]}`}>
+    <header className={styles.header}>
       <Logo />
-      <Menu mode={mode} />
+      <Menu />
     </header>
   );
 }

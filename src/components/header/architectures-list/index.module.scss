@@ -18,7 +18,7 @@
 }
 
 .wrapper {
-  width: 25vw;
+  width: 30vw;
   height: 100%;
   position: relative;
   padding-block: 5rem;
@@ -104,5 +104,37 @@
 
   & path {
     color: white;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .name {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .wrapper {
+    width: 45vw;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .name {
+    font-size: 1.4rem;
+  }
+
+  .wrapper {
+    width: 55vw;
   }
 }

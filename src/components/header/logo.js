@@ -11,7 +11,7 @@ export function Logo() {
   }, []);
 
   return (
-    <figure onClick={handleclick}>
+    <figure onClick={handleclick} className={styles.logo_figure}>
       <Image
         loading="eager"
         priority

@@ -2,8 +2,10 @@
 
 import { useCallback, useState } from "react";
 import { usePathname } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpLong } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import { MENU } from "@constants";
+import { MENU, CONTACT_LINKS } from "@constants";
 import { useHiddenPage, useScrollUp } from "@hooks";
 import { isPathsAreEqual } from "@utils";
 import { MenuBurger } from "./menu-burger";
@@ -12,8 +14,11 @@ import styles from "./index.module.scss";
 
 export function Menu({ mode }) {
   const [showArchitectures, setShowArchitectures] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   const pathname = usePathname();
   const scrollUp = useScrollUp();
+
+  useHiddenPage(showArchitectures);
 
   const handleCloseArchitectures = useCallback(() => {
     setShowArchitectures(false);
@@ -31,11 +36,17 @@ export function Menu({ mode }) {
     [scrollUp, pathname]
   );
 
-  useHiddenPage(showArchitectures);
+  const handleToggleClassName = useCallback(() => {
+    setShowMenu((prev) => !prev);
+  }, []);
 
   return (
-    <div className={`${styles.wrapper} ${styles[mode]}`}>
-      <div className={styles.menu_container}>
+    <div className={styles.wrapper}>
+      <div
+        className={`${styles.menu_container} ${
+          showMenu ? styles.open_menu : ""
+        }`}
+      >
         {MENU.map((item) => (
           <Link
             href={item.link}
@@ -49,11 +60,25 @@ export function Menu({ mode }) {
           </Link>
         ))}
 
-        {showArchitectures && (
-          <ArchitecturesList onClose={handleCloseArchitectures} mode={mode} />
-        )}
+        <div className={styles.contacts_container}>
+          {CONTACT_LINKS.map((item) => (
+            <Link
+              key={item.name}
+              target={item.target}
+              href={item.href}
+              className={styles.contact_link}
+            >
+              {item.name}
+              <FontAwesomeIcon icon={faArrowUpLong} className={styles.arrow} />
+            </Link>
+          ))}
+        </div>
       </div>
-      <MenuBurger open={false} mode={mode} />
+
+      {showArchitectures && (
+        <ArchitecturesList onClose={handleCloseArchitectures} mode={mode} />
+      )}
+      <MenuBurger open={showMenu} onClick={handleToggleClassName} />
     </div>
   );
 }
