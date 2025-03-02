@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpLong } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +15,6 @@ import styles from "./index.module.scss";
 export function Menu({ mode }) {
   const [showArchitectures, setShowArchitectures] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [count, setCount] = useState(0);
   const pathname = usePathname();
   const scrollUp = useScrollUp();
 
@@ -40,12 +39,6 @@ export function Menu({ mode }) {
   const handleToggleClassName = useCallback(() => {
     setShowMenu((prev) => !prev);
   }, []);
-
-  useEffect(() => {
-    if (showMenu) {
-      setCount((prev) => ++prev);
-    }
-  }, [showMenu]);
 
   return (
     <div className={styles.wrapper}>
@@ -85,8 +78,6 @@ export function Menu({ mode }) {
       {showArchitectures && (
         <ArchitecturesList onClose={handleCloseArchitectures} mode={mode} />
       )}
-
-      <p style={{ color: "white" }}>{count}</p>
       <MenuBurger open={showMenu} onClick={handleToggleClassName} />
     </div>
   );
