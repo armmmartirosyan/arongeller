@@ -4,7 +4,7 @@
   background-image: url("/images/banner.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center right;
+  background-position: 0 right;
   background-attachment: fixed;
   padding: 0;
   margin: 0;
@@ -25,18 +25,18 @@
 
 @media only screen and (max-width: 1440px) {
   .top_part {
-    background-position: 24%;
+    background-position: 24% 0;
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .top_part {
-    background-position: 48%;
+    background-position: 48% 0;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .top_part {
-    background-position: 62%;
+    background-position: 62% 0;
   }
 }
