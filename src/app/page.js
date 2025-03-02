@@ -13,11 +13,9 @@ import styles from "@styles/home.module.scss";
 export default function Home() {
   return (
     <main id="main" className={`${styles.main} main`}>
-      <div className={styles.top_part}>
-        <Header />
-        <Banner />
-        <InfoCounter />
-      </div>
+      <Header />
+      <Banner />
+      <InfoCounter />
       <Quotes />
       <Album />
       <div className={styles.footer_quote_wrapper}>

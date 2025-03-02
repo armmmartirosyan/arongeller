@@ -2,6 +2,12 @@
   width: 100vw;
   height: 100dvh;
   position: relative;
+  background-image: url("/images/banner.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 right;
+  background-attachment: fixed;
+  scroll-snap-align: start;
 }
 
 .title {
@@ -36,6 +42,10 @@
 }
 
 @media only screen and (max-width: 1440px) {
+  .banner {
+    background-position: 24% 0;
+  }
+
   .title {
     font-size: 12rem;
   }
@@ -46,6 +56,10 @@
 }
 
 @media only screen and (max-width: 1200px) {
+  .banner {
+    background-position: 48% 0;
+  }
+
   .title {
     font-size: 11rem;
     line-height: 11rem;
@@ -82,6 +96,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .banner {
+    background-position: 62% 0;
+  }
+
   .title {
     font-size: 6rem;
     line-height: 6rem;
