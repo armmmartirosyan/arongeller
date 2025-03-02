@@ -1,9 +1,4 @@
-.main {
-  scroll-snap-type: y mandatory;
-}
-
 .footer_quote_wrapper {
-  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
