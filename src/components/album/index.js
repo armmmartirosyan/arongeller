@@ -6,16 +6,16 @@ import { PROJECTS } from "@constants";
 import { AlbumItem } from "@components";
 import styles from "./index.module.scss";
 
-export const Album = memo(function Album() {
+export const Album = memo(function Album({ containerRef }) {
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    // container: containerRef,
-    offset: ["0 0.85", "0 0"],
+    container: containerRef,
+    offset: ["0 1", "0 0", "1 0"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.4, 0.9, 1], [0, 1, 1, 0]);
 
   return (
     <div className={styles.wrapper}>
