@@ -1,8 +1,12 @@
+.wrapper {
+  width: 100vw;
+  scroll-snap-align: start;
+}
+
 .content {
   width: 100vw;
   display: flex;
   position: relative;
-  scroll-snap-align: start;
 }
 
 .left_part {
