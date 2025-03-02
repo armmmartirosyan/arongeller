@@ -2,7 +2,6 @@ export { default as banner } from "./banner.webp";
 export { default as portrait1 } from "./portrait1.webp";
 export { default as portrait2 } from "./portrait2.webp";
 export { default as crane } from "./crane.webp";
-export { default as architecture } from "./architecture.jpg";
 export * as dreamlandProject from "./dreamland-project";
 export * as fashionVilla from "./fashion-villa";
 export * as alurNatura from "./alur-natura";

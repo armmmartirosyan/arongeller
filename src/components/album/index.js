@@ -6,12 +6,12 @@ import { PROJECTS } from "@constants";
 import { AlbumItem } from "@components";
 import styles from "./index.module.scss";
 
-export const Album = memo(function Album({ containerRef }) {
+export function Album({ containerRef }) {
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    container: containerRef,
+    // container: containerRef,
     offset: ["0 1", "0 0", "1 0"],
   });
 
@@ -41,4 +41,4 @@ export const Album = memo(function Album({ containerRef }) {
       </section>
     </div>
   );
-});
+}
