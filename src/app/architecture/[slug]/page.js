@@ -13,7 +13,7 @@ export default async function Architecture({ params }) {
   const project = PROJECTS.find((project) => project.number === slug);
 
   return (
-    <main id="main" className="main">
+    <main id="main" className={`${styles.main} main`}>
       <Header />
       <ArchitectureContent project={project} />
       <div className={styles.footer_quote_wrapper}>

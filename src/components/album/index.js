@@ -1,33 +1,24 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { memo, useCallback, useRef } from "react";
-import { useScrollToScrollingSection } from "@hooks";
+import { memo, useRef } from "react";
 import { PROJECTS } from "@constants";
 import { AlbumItem } from "@components";
 import styles from "./index.module.scss";
 
 export const Album = memo(function Album() {
   const ref = useRef(null);
-  const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    container: containerRef,
+    // container: containerRef,
     offset: ["0 0.85", "0 0"],
   });
 
   const opacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
-  const handleScroll = useScrollToScrollingSection("album-container");
-
   return (
-    <div
-      ref={containerRef}
-      className={styles.wrapper}
-      onScroll={handleScroll}
-      id="album-container"
-    >
+    <div className={styles.wrapper}>
       <section className={styles.container}>
         <div className={styles.sticky}>
           <div className={styles.sticky_wrapper}>

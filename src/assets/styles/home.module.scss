@@ -1,8 +1,5 @@
 .top_part {
   width: 100vw;
-  height: 100dvh;
-  scroll-snap-align: start;
-  overflow-y: auto;
   position: relative;
   background-image: url("/images/banner.webp");
   background-repeat: no-repeat;
@@ -12,6 +9,7 @@
   padding: 0;
   margin: 0;
   overflow-x: clip;
+  scroll-snap-align: start;
 }
 
 .main {
