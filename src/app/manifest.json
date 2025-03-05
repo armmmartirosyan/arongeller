@@ -1,0 +1,16 @@
+{
+  "name": "Architect Portfolio | Aron Geller",
+  "short_name": "Aron Geller",
+  "description": "An architectural portfolio showcasing exquisite, high-end villa designs that combine strength, beauty, and functionality. Created by a passionate architect dedicated to crafting luxurious homes that cater to every family member’s comfort and needs.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "black",
+  "theme_color": "black",
+  "icons": [
+    {
+      "src": "./favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
