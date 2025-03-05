@@ -42,6 +42,18 @@
   column-gap: 3rem;
 }
 
+.link_dash {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 0.1rem;
+  background-color: var(--creamy-white);
+  transition: all 0.4s;
+}
+
 .link {
   color: var(--creamy-white);
   font-family: var(--font-satoshi);
@@ -50,10 +62,18 @@
   text-decoration: none;
   transition: all 0.4s;
   padding: 1.5rem;
+}
+
+.link_wrapper {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
 
   &:hover,
   &.active {
-    color: var(--deep-orange);
+    & .link_dash {
+      width: calc(100% - 3rem);
+    }
   }
 }
 
@@ -131,6 +151,15 @@
         font-weight: 400;
         font-size: 5rem;
         padding: 0;
+      }
+
+      & .link_wrapper {
+        &:hover,
+        &.active {
+          & .link_dash {
+            width: calc(100%);
+          }
+        }
       }
 
       & .contacts_container {

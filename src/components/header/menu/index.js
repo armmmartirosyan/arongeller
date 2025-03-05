@@ -48,16 +48,21 @@ export function Menu({ mode }) {
         }`}
       >
         {MENU.map((item) => (
-          <Link
-            href={item.link}
+          <div
             key={item.text}
-            className={`${styles.link} ${
+            className={`${styles.link_wrapper} ${
               isPathsAreEqual(pathname, item.activePath) ? styles.active : ""
             }`}
-            onClick={(e) => handleMenuItemClick(item, e)}
           >
-            {item.text}
-          </Link>
+            <Link
+              href={item.link}
+              className={styles.link}
+              onClick={(e) => handleMenuItemClick(item, e)}
+            >
+              {item.text}
+            </Link>
+            <div className={styles.link_dash} />
+          </div>
         ))}
 
         <div className={styles.contacts_container}>
