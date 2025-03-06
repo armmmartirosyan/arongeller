@@ -1,17 +1,20 @@
 @import "react-toastify/dist/ReactToastify.css";
 
 .customized_toast {
-  & .Toastify__close-button {
+  & .toast_close_button {
     width: fit-content;
     height: fit-content;
     border: 0;
     outline: 0;
     background-color: unset;
     cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
 
     & svg {
-      width: 2rem;
-      height: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
       transition: all 0.4s;
       opacity: 0;
 
@@ -21,7 +24,7 @@
     }
   }
 
-  & .Toastify__toast:hover .Toastify__close-button svg {
+  & .Toastify__toast:hover .toast_close_button svg {
     opacity: 1;
   }
 
@@ -72,5 +75,89 @@
     font-style: normal;
     font-weight: 400;
     line-height: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .customized_toast {
+    width: 100%;
+    padding: 2rem;
+
+    & .toast_close_button {
+      width: fit-content;
+      height: fit-content;
+      border: 0;
+      outline: 0;
+      background-color: unset;
+      cursor: pointer;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+
+      & svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        transition: all 0.4s;
+        opacity: 0;
+
+        & path {
+          fill: var(--creamy-white) !important;
+        }
+      }
+    }
+
+    & .Toastify__toast:hover .toast_close_button svg {
+      opacity: 1;
+    }
+
+    & .Toastify__toast {
+      background-color: black;
+      box-shadow: 0 0.2rem 0.8rem #2b2b2b;
+      border-radius: 0.8rem;
+      border: 0.05rem solid #2b2b2b;
+      width: 100%;
+    }
+
+    & .Toastify__toast-icon {
+      width: 2rem;
+      height: 2rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    }
+
+    & .Toastify__toast--error .Toastify__toast-icon {
+      background-image: url("/icons/error-icon.svg");
+    }
+
+    & .Toastify__toast--success .Toastify__toast-icon {
+      background-image: url("/icons/success-icon.svg");
+    }
+
+    & .Toastify__toast--warning .Toastify__toast-icon {
+      background-image: url("/icons/warning-icon.svg");
+    }
+
+    & .Toastify__toast-icon svg {
+      display: none;
+    }
+
+    & .title {
+      color: var(--creamy-white);
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.8rem;
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+    }
+
+    & .text {
+      color: var(--creamy-white);
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.8rem;
+    }
   }
 }
