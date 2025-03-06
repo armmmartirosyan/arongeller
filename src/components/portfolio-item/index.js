@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { Carousel } from "nuka-carousel";
 import Image from "next/image";
+import { LettersPullUp } from "@components";
 import styles from "./index.module.scss";
 
 export function PortfolioItem({ item }) {
@@ -11,12 +12,6 @@ export function PortfolioItem({ item }) {
     <section className={styles.container}>
       <div className={styles.wrapper}>
         <Carousel
-          // renderCenterLeftControls={({ previousSlide }) => (
-          //   <button onClick={previousSlide}>leg</button>
-          // )}
-          // renderCenterRightControls={({ nextSlide }) => (
-          //   <button onClick={nextSlide}>lll</button>
-          // )}
           className={styles.carousel}
           scrollDistance="slide"
           wrapMode="wrap"
@@ -41,12 +36,14 @@ export function PortfolioItem({ item }) {
           {item.name}
           {item.shortDescription && ` - ${item.shortDescription}`}
         </p>
-        <p className={styles.location}>
+        <p className={styles.location_container}>
           <FontAwesomeIcon
             icon={faLocationDot}
             className={styles.location_icon}
           />
-          {item.location}
+          <LettersPullUp className={styles.location}>
+            {item.location}
+          </LettersPullUp>
         </p>
       </div>
     </section>

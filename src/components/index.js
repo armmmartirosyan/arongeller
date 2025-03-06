@@ -20,4 +20,5 @@ export { PortfolioItem } from "./portfolio-item";
 export { ArchitectureContent } from "./architecture-content";
 export { MotionWrapper } from "./motion-wrapper";
 export { LettersPullUp } from "./letters-pull-up";
+export { BlurIn } from "./blur-in";
 export * from "./toast";

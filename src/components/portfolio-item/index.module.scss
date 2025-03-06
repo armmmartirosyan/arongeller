@@ -39,20 +39,21 @@
   font-weight: 400;
   color: white;
   word-spacing: 0.8rem;
-  // text-shadow: 0.2rem 0.1rem 0.4rem black;
   background-color: black;
 }
 
 .location {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
   text-align: center;
   font-size: 3rem;
   font-weight: 400;
   color: white;
   word-spacing: 0.8rem;
-  // text-shadow: 0.2rem 0.1rem 0.4rem black;
+}
+
+.location_container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;

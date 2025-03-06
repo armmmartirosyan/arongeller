@@ -141,3 +141,49 @@ export const slideIn = ({ direction, type, delay, duration, once }) => {
     },
   };
 };
+
+export const blurIn = ({ duration, once }) => {
+  return {
+    initial: "hidden",
+    whileInView: "show",
+    viewport: { once },
+    variants: {
+      hidden: {
+        filter: "blur(20px)",
+        opacity: 0,
+      },
+      show: {
+        filter: "blur(0px)",
+        opacity: 1,
+        transition: {
+          duration,
+          ease: "easeOut",
+        },
+      },
+    },
+  };
+};
+
+export const opacityScale = ({ once, type, delay, duration }) => {
+  return {
+    initial: "hidden",
+    whileInView: "show",
+    viewport: { once },
+    variants: {
+      hidden: {
+        opacity: 0.5,
+        scale: 0.8,
+      },
+      show: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+          type: type,
+          delay: delay,
+          duration: duration,
+          ease: "easeOut",
+        },
+      },
+    },
+  };
+};
