@@ -1,14 +1,29 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { LettersPullUp } from "@components";
+import { fadeIn } from "@utils";
 import styles from "./index.module.scss";
 
-export function ReviewCard({ item }) {
+export function ReviewCard({ item, index }) {
   return (
-    <div className={styles.container}>
+    <motion.div
+      className={styles.container}
+      {...fadeIn({
+        direction: index % 2 !== 1 ? "right" : "left",
+        once: true,
+        type: "spring",
+        delay: 0.2,
+      })}
+    >
       <p className={styles.primary_text}>{item.primaryText}</p>
       <p className={styles.text}>{item.text}</p>
       <h2 className={styles.name_location}>
         {item.reviewer},{" "}
-        <span className={styles.location}>{item.location}</span>
+        <LettersPullUp className={styles.location}>
+          {item.location}
+        </LettersPullUp>
       </h2>
-    </div>
+    </motion.div>
   );
 }

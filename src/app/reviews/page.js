@@ -1,7 +1,9 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Header, Footer, ReviewCard, ScrollToTop } from "@components";
 import { REVIEWS } from "@constants";
+import { textVariant } from "@utils";
 import styles from "@styles/reviews.module.scss";
 
 export default function Reviews() {
@@ -9,11 +11,16 @@ export default function Reviews() {
     <main id="main" className="main">
       <Header />
       <div className={styles.page_head_text_wrapper}>
-        <h1 className={styles.page_header}>Reviews</h1>
+        <motion.h1
+          className={styles.page_header}
+          {...textVariant({ once: true })}
+        >
+          Reviews
+        </motion.h1>
       </div>
       <div className={styles.reviews_list}>
-        {REVIEWS.map((item) => (
-          <ReviewCard key={item.reviewer} item={item} />
+        {REVIEWS.map((item, index) => (
+          <ReviewCard key={item.reviewer} item={item} index={index} />
         ))}
       </div>
       <Footer />

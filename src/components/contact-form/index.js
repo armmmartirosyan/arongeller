@@ -29,6 +29,7 @@ export function ContactForm() {
         type: "spring",
         delay: 0.1,
         duration: 1,
+        once: true,
       })}
     >
       <form ref={formRef} action={handleSubmit} className={styles.form}>

@@ -13,7 +13,7 @@ export function ToastContainer(props) {
       className="customized_toast"
       closeButton={<CloseButton />}
       closeOnClick={true}
-      autoClose={600000}
+      autoClose={3000}
       {...props}
     />
   );

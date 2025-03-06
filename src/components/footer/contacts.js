@@ -15,6 +15,7 @@ export function Contacts() {
         type: "spring",
         delay: 0.1,
         duration: 1,
+        once: true,
       })}
     >
       {CONTACT_LINKS.map((item) => (
