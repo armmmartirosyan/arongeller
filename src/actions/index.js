@@ -7,12 +7,14 @@ const user = "armenmartirosyan020@gmail.com";
 const pass = "nabyzvclyxvkhxkr";
 
 export async function sendEmail(formData) {
+  const name = formData.get("name") || "";
   const email = formData.get("email") || "";
+  const phone = formData.get("phone") || "";
   const message = formData.get("message") || "";
 
-  if (!email || !message) {
+  if (!email || !message || !name || !phone) {
     return {
-      message: "The email and message fields are required.",
+      message: "The fields are required.",
       success: false,
     };
   }
@@ -28,25 +30,41 @@ export async function sendEmail(formData) {
   });
 
   const mailData = {
-    from: "'Wants to connect' <armenmartirosyan020@gmail.com>",
+    from: "'Contact manager' <armenmartirosyan020@gmail.com>",
     to: EMAIL,
-    subject: "Wants to connect to you.",
-    text: message,
-    html: `<div>Email: ${email}<br>Message: ${message}</div>`,
+    subject: "Contact form submission:",
+    html: getHTMLTemplate({ name, email, phone, message }),
   };
 
   try {
     await transporter.sendMail(mailData);
   } catch (error) {
     return {
-      message: "Failed to send message.",
+      message: "Failed to send the email!",
       success: false,
     };
   }
 
   return {
     success: true,
-    message:
-      "Thank you for connecting with me. The message was sent successfully.",
+    message: "Email sent.",
   };
+}
+
+function getHTMLTemplate({ name, email, phone, message }) {
+  return `
+    <html>
+    <body style="font-family: Arial, sans-serif;">
+      <div style="max-width: 600px; margin: auto; padding: 20px; background: #fff; box-shadow: 0px 2px 10px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; background: #333; color: white; padding: 10px;">📩 New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <div style="background: #f9f9f9; padding: 15px; border-left: 4px solid #333;">
+          <p>${message}</p>
+        </div>
+      </div>
+    </body>
+    </html>
+  `;
 }

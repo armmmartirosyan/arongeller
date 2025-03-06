@@ -5,7 +5,7 @@ import { zoomIn } from "@utils";
 import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { Button, Input, Textarea } from "@components";
+import { Button, Input, Textarea, toast } from "@components";
 import { sendEmail } from "@actions";
 import styles from "./index.module.scss";
 
@@ -19,7 +19,7 @@ export function ContactForm() {
       formRef.current?.reset();
     }
 
-    alert(message);
+    toast(message, success ? "success" : "error");
   };
 
   return (
@@ -33,10 +33,26 @@ export function ContactForm() {
     >
       <form ref={formRef} action={handleSubmit} className={styles.form}>
         <Input
+          type="text"
+          name="name"
+          required={true}
+          label="Name"
+          wrapperClassName={styles.input}
+        />
+
+        <Input
           type="email"
           name="email"
           required={true}
           label="Email"
+          wrapperClassName={styles.input}
+        />
+
+        <Input
+          type="number"
+          name="phone"
+          required={true}
+          label="Phone number"
           wrapperClassName={styles.input}
         />
 
