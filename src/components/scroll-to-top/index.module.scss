@@ -13,6 +13,7 @@
   background-color: transparent;
   cursor: pointer;
   transition: all 0.4s;
+  scale: 0;
 
   &:hover {
     border-color: var(--deep-orange);
@@ -24,6 +25,10 @@
         color: var(--deep-orange);
       }
     }
+  }
+
+  &.show {
+    scale: 1;
   }
 }
 

@@ -23,7 +23,14 @@ export function ContactForm() {
   };
 
   return (
-    <motion.div className={styles.wrapper} {...zoomIn("spring", 0.1, 1)}>
+    <motion.div
+      className={styles.wrapper}
+      {...zoomIn({
+        type: "spring",
+        delay: 0.1,
+        duration: 1,
+      })}
+    >
       <form ref={formRef} action={handleSubmit} className={styles.form}>
         <Input
           type="email"

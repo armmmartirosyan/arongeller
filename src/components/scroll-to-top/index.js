@@ -3,8 +3,6 @@
 import { useCallback, useState, useEffect, memo, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { motion } from "framer-motion";
-import { zoomIn } from "@utils";
 import styles from "./index.module.scss";
 
 export const ScrollToTop = memo(function ScrollToTop() {
@@ -41,18 +39,15 @@ export const ScrollToTop = memo(function ScrollToTop() {
     }
   }, []);
 
-  if (!showGoTop) {
-    return <></>;
-  }
-
   return (
-    <motion.button
+    <button
       ref={ref}
       onClick={handleScrollUp}
-      {...zoomIn("spring", 0, 0.05)}
-      className={`${styles.button} hide_on_page_hidden`}
+      className={`${styles.button} hide_on_page_hidden ${
+        showGoTop ? styles.show : ""
+      }`}
     >
       <FontAwesomeIcon icon={faAngleUp} className={styles.icon} />
-    </motion.button>
+    </button>
   );
 });

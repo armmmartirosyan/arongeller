@@ -2,7 +2,7 @@ import { allFontsVariables } from "@fonts";
 import "@styles/globals.scss";
 
 export const metadata = {
-  title: "Architect Portfolio | Aron Geller",
+  title: "Architect | Aron Geller",
   description:
     "Discover breathtaking, high-end villa designs crafted by a dedicated architect. Combining strength, elegance, and functionality, each project is meticulously planned to create a perfect living space for families.",
   keywords: [

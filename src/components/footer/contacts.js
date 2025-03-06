@@ -10,7 +10,12 @@ export function Contacts() {
   return (
     <motion.div
       className={styles.contacts_container}
-      {...slideIn("up", "spring", 0.1, 1)}
+      {...slideIn({
+        direction: "up",
+        type: "spring",
+        delay: 0.1,
+        duration: 1,
+      })}
     >
       {CONTACT_LINKS.map((item) => (
         <Link
