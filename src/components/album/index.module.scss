@@ -1,7 +1,6 @@
 .wrapper {
   width: 100vw;
   position: relative;
-  // scroll-snap-align: start;
 }
 
 .container {
@@ -71,7 +70,7 @@
 
 .empty {
   width: 100%;
-  height: 100dvh;
+  height: 40dvh;
 }
 
 .row:nth-child(even) .item {
@@ -91,6 +90,16 @@
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .row {
+    margin-bottom: 20rem;
+  }
+
+  .empty {
+    height: 30dvh;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .sticky_text {
     font-size: 10rem;
@@ -101,7 +110,26 @@
   }
 
   .row {
-    margin-bottom: 20rem;
+    margin-bottom: 15rem;
+  }
+
+  .row:nth-child(even) .item {
+    flex-direction: column;
+
+    .text_container_class {
+      flex-direction: row;
+      align-items: flex-start;
+      column-gap: 1rem;
+      padding-top: 2rem;
+
+      & * {
+        text-align: left !important;
+      }
+    }
+  }
+
+  .empty {
+    height: 20dvh;
   }
 }
 
@@ -111,6 +139,6 @@
   }
 
   .row {
-    margin-bottom: 15rem;
+    margin-bottom: 8rem;
   }
 }

@@ -2,7 +2,6 @@
   width: 100vw;
   height: 100dvh;
   position: relative;
-  // scroll-snap-align: start;
 }
 
 .banner {
@@ -12,6 +11,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 right;
+  filter: brightness(0.7);
 }
 
 .title {
@@ -99,7 +99,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 525px) {
   .banner {
     background-position: 62% 0;
   }
@@ -119,5 +119,8 @@
     font-size: 2rem;
     bottom: 20%;
     max-width: 42rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 }

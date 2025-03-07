@@ -1,15 +1,9 @@
 .item {
-  // scroll-snap-align: start;
-  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 10rem;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  margin-block: 10rem;
 }
 
 .img_wrapper {
@@ -52,6 +46,10 @@
 @media only screen and (max-width: 1000px) {
   .text {
     max-width: 45rem;
+  }
+
+  .item {
+    margin-block: 5rem;
   }
 }
 
