@@ -1,6 +1,8 @@
 "use client";
 
 import { useRef } from "react";
+import { motion } from "framer-motion";
+import { opacityScale } from "@utils";
 import { useCountUp, useInViewport } from "@hooks";
 import { COUNTER_INFORMATION } from "@constants";
 import styles from "./index.module.scss";
@@ -10,6 +12,10 @@ const firstSix = COUNTER_INFORMATION.slice(-6);
 export function PortfolioBanner() {
   return (
     <div className={styles.banner}>
+      <motion.div
+        className={styles.banner_bg}
+        {...opacityScale({ duration: 0.8, once: true, type: "spring" })}
+      />
       <div className={styles.info_container}>
         {firstSix.map((item, index) => (
           <InfoItem key={index} item={item} />
