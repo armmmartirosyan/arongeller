@@ -9,6 +9,7 @@ export function LettersPullUp({
   className = "",
   wrapperClassName = "",
   containerClassName = "",
+  duration = 0.3,
 }) {
   const splittedText = children.split("");
 
@@ -19,7 +20,7 @@ export function LettersPullUp({
       opacity: 1,
       transition: {
         delay: i * 0.05,
-        duration: 0.3,
+        duration,
       },
     }),
   };

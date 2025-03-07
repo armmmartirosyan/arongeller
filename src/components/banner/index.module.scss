@@ -18,12 +18,15 @@
   font-weight: 300;
   color: var(--creamy-white);
   font-size: 14rem;
+  line-height: 13rem;
+  text-shadow: 0.7rem 0.5rem 0.6rem #000;
+}
+
+.title_container {
   position: absolute;
   top: 12rem;
   left: 4rem;
   max-width: 85%;
-  line-height: 13rem;
-  text-shadow: 0.7rem 0.5rem 0.6rem #000;
 }
 
 .highlighted {
@@ -67,6 +70,9 @@
   .title {
     font-size: 11rem;
     line-height: 11rem;
+  }
+
+  .title_container {
     top: 15rem;
   }
 
@@ -85,6 +91,9 @@
   .title {
     font-size: 9rem;
     line-height: 9rem;
+  }
+
+  .title_container {
     top: 20%;
   }
 
@@ -107,6 +116,9 @@
   .title {
     font-size: 6rem;
     line-height: 6rem;
+  }
+
+  .title_container {
     top: 30%;
   }
 
