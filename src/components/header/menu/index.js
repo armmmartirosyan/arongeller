@@ -18,7 +18,7 @@ export function Menu({ mode }) {
   const pathname = usePathname();
   const scrollUp = useScrollUp();
 
-  useHiddenPage(showArchitectures);
+  useHiddenPage(showArchitectures || showMenu);
 
   const handleCloseArchitectures = useCallback(() => {
     setShowArchitectures(false);
