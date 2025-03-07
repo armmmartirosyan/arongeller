@@ -3,8 +3,8 @@
 import nodemailer from "nodemailer";
 import { EMAIL } from "@constants";
 
-const user = "armenmartirosyan020@gmail.com";
-const pass = "nabyzvclyxvkhxkr";
+const user = "contactmanager001@gmail.com";
+const pass = "mfan ikqm smkr xjqr";
 
 export async function sendEmail(formData) {
   const name = formData.get("name") || "";
@@ -30,7 +30,7 @@ export async function sendEmail(formData) {
   });
 
   const mailData = {
-    from: "'Contact manager' <armenmartirosyan020@gmail.com>",
+    from: "'Contact manager' <contactmanager001@gmail.com>",
     to: EMAIL,
     subject: "Contact form submission:",
     html: getHTMLTemplate({ name, email, phone, message }),
@@ -40,7 +40,7 @@ export async function sendEmail(formData) {
     await transporter.sendMail(mailData);
   } catch (error) {
     return {
-      message: "Failed to send the email!",
+      message: "Failed sending the email!",
       success: false,
     };
   }
