@@ -54,7 +54,6 @@
   font-weight: 400;
   font-size: 2rem;
   text-decoration: none;
-  transition: all 0.4s;
   padding: 1.5rem;
 }
 
@@ -120,14 +119,11 @@
   }
 
   .menu_container {
-    opacity: 0;
+    display: none;
     position: absolute;
-    bottom: 100dvh;
 
     &.open_menu {
-      opacity: 1;
-      position: absolute;
-      bottom: unset;
+      display: flex;
       top: 0;
       left: 0;
       width: 100vw;

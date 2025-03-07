@@ -187,3 +187,39 @@ export const opacityScale = ({ once, type, delay, duration }) => {
     },
   };
 };
+
+export const fadeInTwo = ({
+  directionX,
+  directionY,
+  type,
+  delay,
+  duration,
+  once,
+}) => {
+  return {
+    initial: "hidden",
+    whileInView: "show",
+    viewport: { once },
+    variants: {
+      hidden: {
+        x: directionX === "left" ? 100 : directionX === "right" ? -100 : 0,
+        y: directionY === "up" ? 100 : directionY === "down" ? -100 : 0,
+        opacity: 0,
+      },
+      show: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: type,
+          delay: delay,
+          duration: duration,
+          ease: "easeOut",
+          y: {
+            duration: duration - 0.2,
+          },
+        },
+      },
+    },
+  };
+};
