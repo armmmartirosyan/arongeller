@@ -56,7 +56,8 @@ export const MENU = [
   },
 ];
 
-export const EMAIL = "arongeller@mail.com";
+// export const EMAIL = "arongeller@mail.com"; TODO: Uncomment this
+export const EMAIL = "armmmartirosyan@mail.ru";
 
 export const CONTACT_LINKS = [
   {

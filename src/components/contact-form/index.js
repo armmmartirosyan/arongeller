@@ -49,11 +49,13 @@ export function ContactForm() {
         />
 
         <Input
-          type="number"
+          type="text"
           name="phone"
           required={true}
           label="Phone number"
           wrapperClassName={styles.input}
+          pattern="\+?\d{8,}"
+          invalidMessage="Phone number must contain only an optional '+' mark and digits(at least 8)"
         />
 
         <Textarea

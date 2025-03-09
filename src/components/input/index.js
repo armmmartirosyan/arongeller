@@ -1,6 +1,6 @@
 "use client";
 
-import { useId } from "react";
+import { useCallback, useId } from "react";
 import styles from "./index.module.scss";
 
 export function Input({
@@ -10,9 +10,16 @@ export function Input({
   type = "text",
   inputClassName = "",
   wrapperClassName = "",
+  validator,
+  pattern,
+  invalidMessage,
   ...rest
 }) {
   const id = useId();
+
+  const onInvalid = useCallback((e) => {
+    e.target.setCustomValidity(e.target.willValidate ? "" : invalidMessage);
+  }, []);
 
   return (
     <div className={`${styles.wrapper} ${wrapperClassName}`}>
@@ -25,6 +32,8 @@ export function Input({
         name={name}
         placeholder={placeholder}
         className={`${inputClassName} ${styles.input}`}
+        onInvalid={invalidMessage && onInvalid}
+        pattern={pattern}
         {...rest}
       />
     </div>
