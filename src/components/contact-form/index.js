@@ -26,7 +26,6 @@ export function ContactForm() {
     <motion.div
       className={styles.wrapper}
       {...zoomIn({
-        type: "spring",
         delay: 0.1,
         duration: 1,
         once: true,

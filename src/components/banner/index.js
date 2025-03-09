@@ -11,7 +11,7 @@ export function Banner() {
     <div className={styles.banner_wrapper}>
       <motion.section
         className={styles.banner}
-        {...opacityScale({ duration: 1, once: true, type: "spring" })}
+        {...opacityScale({ duration: 1, once: true })}
       />
       <motion.h2
         className={styles.title_container}

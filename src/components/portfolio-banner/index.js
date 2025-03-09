@@ -14,7 +14,7 @@ export function PortfolioBanner() {
     <div className={styles.banner}>
       <motion.div
         className={styles.banner_bg}
-        {...opacityScale({ duration: 0.8, once: true, type: "spring" })}
+        {...opacityScale({ duration: 0.8, once: true })}
       />
       <div className={styles.info_container}>
         {firstSix.map((item, index) => (

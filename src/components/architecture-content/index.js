@@ -13,7 +13,7 @@ export function ArchitectureContent({ project }) {
       <div className={styles.left_part}>
         <motion.div
           className={styles.left_part_bg}
-          {...opacityScale({ duration: 0.8, once: true, type: "spring" })}
+          {...opacityScale({ duration: 0.8, once: true })}
         />
         <div className={styles.left_part_container}>
           <h1 className={styles.title}>Architecture</h1>

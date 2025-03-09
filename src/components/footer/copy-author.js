@@ -1,16 +1,9 @@
-// "use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { zoomIn } from "@utils";
 import styles from "./index.module.scss";
 
 export function CopyAuthor() {
   return (
-    <div
-      className={styles.creator_container}
-      // {...zoomIn("spring", 0.1, 0.1)}
-    >
+    <div className={styles.creator_container}>
       <p className={styles.footer_text}>
         &copy; {new Date().getFullYear()} All Rights Reserved
       </p>

@@ -1,19 +1,11 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const BlurIn = ({ children, className = "", duration = 0.8 }) => {
-  // const ref = useRef(null);
-  // const isInView = useInView(ref, { once: true });
-
   return (
     <motion.span
-      // ref={ref}
       className={className}
-      // transition={{ duration }}
-      // initial={{ filter: "blur(20px)", opacity: 0 }}
-      // animate={isInView ? { filter: "blur(0px)", opacity: 1 } : {}}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}

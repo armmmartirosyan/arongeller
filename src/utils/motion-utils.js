@@ -1,15 +1,3 @@
-// export const staggerContainer = (staggerChildren, delayChildren) => {
-//   return {
-//     hidden: {},
-//     show: {
-//       transition: {
-//         staggerChildren: staggerChildren,
-//         delayChildren: delayChildren || 0,
-//       },
-//     },
-//   };
-// };
-
 export const textVariant = ({ delay, duration, once }) => {
   return {
     initial: "hidden",
@@ -76,7 +64,7 @@ export const zoomIn = ({ type, delay, duration, once }) => {
           type: type,
           delay: delay,
           duration: duration,
-          ease: "easeOut",
+          // ease: "easeIn",
         },
       },
     },
