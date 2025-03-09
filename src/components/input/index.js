@@ -19,10 +19,14 @@ export function Input({
 
   const onInvalid = useCallback(
     (e) => {
-      e.target.setCustomValidity(e.target.willValidate ? "" : invalidMessage);
+      e.target.setCustomValidity(invalidMessage);
     },
     [invalidMessage]
   );
+
+  const onInput = useCallback((e) => {
+    e.target.setCustomValidity("");
+  }, []);
 
   return (
     <div className={`${styles.wrapper} ${wrapperClassName}`}>
@@ -36,6 +40,7 @@ export function Input({
         placeholder={placeholder}
         className={`${inputClassName} ${styles.input}`}
         onInvalid={invalidMessage && onInvalid}
+        onInput={invalidMessage && onInput}
         pattern={pattern}
         {...rest}
       />
