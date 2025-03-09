@@ -17,9 +17,12 @@ export function Input({
 }) {
   const id = useId();
 
-  const onInvalid = useCallback((e) => {
-    e.target.setCustomValidity(e.target.willValidate ? "" : invalidMessage);
-  }, []);
+  const onInvalid = useCallback(
+    (e) => {
+      e.target.setCustomValidity(e.target.willValidate ? "" : invalidMessage);
+    },
+    [invalidMessage]
+  );
 
   return (
     <div className={`${styles.wrapper} ${wrapperClassName}`}>
