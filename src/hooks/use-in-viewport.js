@@ -4,26 +4,28 @@ export function useInViewport(targetRef) {
   const [isVisible, setIsVisible] = useState(0);
 
   useEffect(() => {
+    const target = targetRef.current;
+
+    if (!target) {
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(targetRef.current);
+          observer.unobserve(target);
         }
       },
       { threshold: 0.5 }
     );
 
-    if (targetRef.current) {
-      observer.observe(targetRef.current);
-    }
+    observer.observe(target);
 
     return () => {
-      if (targetRef.current) {
-        observer.unobserve(targetRef.current);
-      }
+      observer.unobserve(target);
     };
-  }, []);
+  }, [targetRef]);
 
   return isVisible;
 }
