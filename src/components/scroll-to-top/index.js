@@ -8,7 +8,7 @@ import styles from "./index.module.scss";
 export const ScrollToTop = memo(function ScrollToTop() {
   const [showGoTop, setShowGoTop] = useState(true);
   const parentElement = useRef(null);
-  const ref = useRef();
+  const ref = useRef(null);
 
   const handleScrollUp = useCallback(() => {
     parentElement.current.scrollTo({ left: 0, top: 0, behavior: "smooth" });
@@ -17,7 +17,7 @@ export const ScrollToTop = memo(function ScrollToTop() {
       top: 0,
       behavior: "smooth",
     });
-  }, [parentElement.current]);
+  }, []);
 
   const handleVisibleButton = useCallback(() => {
     setShowGoTop(parentElement.current.scrollTop > 500);
@@ -37,7 +37,7 @@ export const ScrollToTop = memo(function ScrollToTop() {
           handleVisibleButton
         );
     }
-  }, []);
+  }, [handleVisibleButton]);
 
   return (
     <button

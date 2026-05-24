@@ -43,15 +43,15 @@ export function Menu({ mode }) {
   }, []);
 
   useEffect(() => {
-    setAllowMenuAnimation(window.matchMedia("(max-width: 768px)").matches);
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
 
     function resize(e) {
-      setAllowMenuAnimation(e.target.matchMedia("(max-width: 768px)").matches);
+      setAllowMenuAnimation(e.matches);
     }
 
-    window.addEventListener("resize", resize);
+    mediaQuery.addEventListener("change", resize);
 
-    return () => window.removeEventListener("resize", resize);
+    return () => mediaQuery.removeEventListener("change", resize);
   }, []);
 
   return (
