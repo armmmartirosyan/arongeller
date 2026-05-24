@@ -7,7 +7,9 @@ import { useCallback } from "react";
 
 export function Logo() {
   const handleclick = useCallback(() => {
-    window.location.href = "/";
+    if(window){
+      window.location.href = "/";
+    }
   }, []);
 
   return (
