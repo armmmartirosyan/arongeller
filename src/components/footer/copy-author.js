@@ -10,7 +10,7 @@ export function CopyAuthor() {
       <p className={styles.footer_text}>
         Powered by{" "}
         <Link
-          href="https://portfolio-armen.vercel.app/en"
+          href="https://armens-portfolio.vercel.app/"
           target="_blank"
           className={styles.creator_link}
         >
